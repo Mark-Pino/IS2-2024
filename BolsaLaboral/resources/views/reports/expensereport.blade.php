@@ -3,7 +3,7 @@
 @section('content')
     {{-- message --}}
     {!! Toastr::message() !!}
-   
+
     <!-- Page Wrapper -->
     <div class="page-wrapper">
         <!-- Page Content -->
@@ -12,21 +12,21 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="page-title">Expense Report</h3>
+                        <h3 class="page-title">Informe de gastos</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Expense Report</li>
+                            <li class="breadcrumb-item active">Informe de gastos</li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- /Page Header -->
-            
+
             <!-- Search Filter -->
             <div class="row filter-row">
-                <div class="col-sm-6 col-md-3"> 
+                <div class="col-sm-6 col-md-3">
                     <div class="form-group form-focus select-focus">
-                        <select class="select floating"> 
+                        <select class="select floating">
                             <option>Select buyer</option>
                             <option>Loren Gatlin</option>
                             <option>Tarah Shropshire</option>
@@ -34,7 +34,7 @@
                         <label class="focus-label">Purchased By</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">  
+                <div class="col-sm-6 col-md-3">
                     <div class="form-group form-focus">
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
@@ -42,7 +42,7 @@
                         <label class="focus-label">From</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">  
+                <div class="col-sm-6 col-md-3">
                     <div class="form-group form-focus">
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
@@ -50,12 +50,12 @@
                         <label class="focus-label">To</label>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">  
-                    <a href="#" class="btn btn-success btn-block"> Search </a>  
-                </div>     
+                <div class="col-sm-6 col-md-3">
+                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                </div>
             </div>
             <!-- /Search Filter -->
-            
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="table-responsive">
@@ -150,7 +150,7 @@
             </div>
         </div>
         <!-- /Page Content -->
-        
+
     </div>
     <!-- /Page Wrapper -->
 

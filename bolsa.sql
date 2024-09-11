@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-09-2024 a las 08:47:17
+-- Tiempo de generación: 11-09-2024 a las 06:55:49
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -42,27 +42,10 @@ CREATE TABLE `activity_logs` (
 --
 
 INSERT INTO `activity_logs` (`id`, `name`, `email`, `description`, `date_time`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 9:44 AM', NULL, NULL),
-(2, 'Admin', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 9:54 AM', NULL, NULL),
-(3, 'asfasgsgag', 'asgfasgas@asfas', 'Has log in', 'Tue, Sep 10, 2024 9:54 AM', NULL, NULL),
-(4, 'asfasgsgag', 'asgfasgas@asfas', 'Has log out', 'Tue, Sep 10, 2024 9:59 AM', NULL, NULL),
-(5, 'cli', 'cli@cli', 'Has log in', 'Tue, Sep 10, 2024 10:00 AM', NULL, NULL),
-(6, 'cli', 'cli@cli', 'Has log out', 'Tue, Sep 10, 2024 10:08 AM', NULL, NULL),
-(7, 'Admin', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 10:08 AM', NULL, NULL),
-(8, 'Admin', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 10:14 AM', NULL, NULL),
-(9, 'Admin', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 10:15 AM', NULL, NULL),
-(10, 'Admin', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 10:16 AM', NULL, NULL),
-(11, 'Admin', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 10:18 AM', NULL, NULL),
-(12, 'Admin', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 10:32 AM', NULL, NULL),
-(13, 'cli', 'cli@cli', 'Has log in', 'Tue, Sep 10, 2024 10:32 AM', NULL, NULL),
-(14, 'cli', 'cli@cli', 'Has log out', 'Tue, Sep 10, 2024 12:02 PM', NULL, NULL),
-(15, 'Admin', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 12:05 PM', NULL, NULL),
-(16, 'Admin', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 12:05 PM', NULL, NULL),
-(17, 'Mark', 'kiwina8342@acuxi.com', 'Has log in', 'Tue, Sep 10, 2024 12:08 PM', NULL, NULL),
-(18, 'Mark', 'kiwina8342@acuxi.com', 'Has log out', 'Tue, Sep 10, 2024 12:09 PM', NULL, NULL),
-(19, 'Mark', 'kiwina8342@acuxi.com', 'Has log in', 'Tue, Sep 10, 2024 12:12 PM', NULL, NULL),
-(20, 'Mark', 'kiwina8342@acuxi.com', 'Has log out', 'Tue, Sep 10, 2024 12:14 PM', NULL, NULL),
-(21, 'Mark', 'kiwina8342@acuxi.com', 'Has log in', 'Tue, Sep 10, 2024 12:24 PM', NULL, NULL);
+(1, 'Admin', 'admin@gmail.com', 'Has log out', 'Wed, Sep 11, 2024 10:16 AM', NULL, NULL),
+(2, 'Mark', 'admin@gmail.com', 'Has log in', 'Wed, Sep 11, 2024 10:20 AM', NULL, NULL),
+(3, 'Mark', 'admin@gmail.com', 'Has log out', 'Wed, Sep 11, 2024 10:48 AM', NULL, NULL),
+(4, 'Mark', 'admin@gmail.com', 'Has log in', 'Wed, Sep 11, 2024 10:48 AM', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -89,13 +72,6 @@ CREATE TABLE `add_jobs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `add_jobs`
---
-
-INSERT INTO `add_jobs` (`id`, `job_title`, `department`, `job_location`, `no_of_vacancies`, `experience`, `age`, `salary_from`, `salary_to`, `job_type`, `status`, `start_date`, `expired_date`, `description`, `count`, `created_at`, `updated_at`) VALUES
-(1, 'asf', 'asdasd', 'asf', 'asf', 'asf', '12', '124', '1241', 'Internship', 'Open', '09-09-2024', '13-09-2024', 'asdawq', '10', '2024-09-10 15:13:47', '2024-09-10 17:23:41');
 
 -- --------------------------------------------------------
 
@@ -139,13 +115,6 @@ CREATE TABLE `apply_for_jobs` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `apply_for_jobs`
---
-
-INSERT INTO `apply_for_jobs` (`id`, `job_title`, `name`, `phone`, `email`, `message`, `cv_upload`, `created_at`, `updated_at`) VALUES
-(1, 'asf', 'Mark', '1241', 'mark.pino@upeu.edu.pe', 'asffaf', '1725938253.pdf', '2024-09-10 15:17:33', '2024-09-10 15:17:33');
-
 -- --------------------------------------------------------
 
 --
@@ -159,13 +128,6 @@ CREATE TABLE `categories` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `categories`
---
-
-INSERT INTO `categories` (`id`, `category`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'asf', NULL, '2024-09-10 15:19:51', '2024-09-10 15:19:51');
 
 -- --------------------------------------------------------
 
@@ -187,8 +149,7 @@ CREATE TABLE `departments` (
 INSERT INTO `departments` (`id`, `department`, `created_at`, `updated_at`) VALUES
 (1, 'Web Department', NULL, NULL),
 (2, 'IT Management', NULL, NULL),
-(3, 'Marketing', NULL, NULL),
-(4, 'asdasd', '2024-09-10 15:08:29', '2024-09-10 15:08:29');
+(3, 'Marketing', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -207,15 +168,6 @@ CREATE TABLE `employees` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `employees`
---
-
-INSERT INTO `employees` (`id`, `name`, `email`, `birth_date`, `gender`, `employee_id`, `company`, `created_at`, `updated_at`) VALUES
-(2, 'cli', 'cli@cli', '09-09-2024', 'male', 'KH_00003', 'Admin', '2024-09-10 15:10:37', '2024-09-10 15:10:37'),
-(3, 'Admin', 'admin@gmail.com', '09-09-2024', 'male', 'KH_00001', 'Admin', '2024-09-10 16:53:05', '2024-09-10 16:53:05'),
-(4, 'Mark', 'kiwina8342@acuxi.com', '10-09-2024', 'Female', 'KH_00004', 'StarGame Kh', '2024-09-10 18:33:18', '2024-09-10 18:33:18');
 
 -- --------------------------------------------------------
 
@@ -242,14 +194,6 @@ CREATE TABLE `estimates` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `estimates`
---
-
-INSERT INTO `estimates` (`id`, `estimate_number`, `client`, `project`, `email`, `tax`, `client_address`, `billing_address`, `estimate_date`, `expiry_date`, `total`, `tax_1`, `discount`, `grand_total`, `other_information`, `created_at`, `updated_at`) VALUES
-(1, 'EST_000001', 'Barry Cuda', 'Office Management', 'markrogerpinochata@gmail.com', 'VAT', 'asd', 'asd', '09-09-2024', '13-09-2024', '583635', '5836.35', '10', '44885', 'asfasf', '2024-09-10 15:28:36', '2024-09-10 15:28:36'),
-(2, 'EST_000002', 'Tressa Wexler', 'Office Management', 'admin@gmail.com', 'VAT', 'gvs', 'sh', '12-09-2024', '26-09-2024', '80352', '803.52', '10', '13382', NULL, '2024-09-10 18:09:58', '2024-09-10 18:09:58');
 
 --
 -- Disparadores `estimates`
@@ -279,16 +223,6 @@ CREATE TABLE `estimates_adds` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `estimates_adds`
---
-
-INSERT INTO `estimates_adds` (`id`, `estimate_number`, `item`, `description`, `unit_cost`, `qty`, `amount`, `created_at`, `updated_at`) VALUES
-(1, 'EST_000001', 'qwe', 'asf', '123', '13', '583635', '2024-09-10 15:28:36', '2024-09-10 15:28:36'),
-(2, 'EST_000001', 'qwe', '1qwe', '123', '1', '583635', '2024-09-10 15:28:36', '2024-09-10 15:28:36'),
-(3, 'EST_000002', 'r7y', 'fyk', '123', '6', '80352', '2024-09-10 18:09:58', '2024-09-10 18:09:58'),
-(4, 'EST_000002', 'fj', 'gfjfg', '567', '8', '80352', '2024-09-10 18:09:58', '2024-09-10 18:09:58');
 
 -- --------------------------------------------------------
 
@@ -345,8 +279,17 @@ CREATE TABLE `holidays` (
 --
 
 INSERT INTO `holidays` (`id`, `name_holiday`, `date_holiday`, `created_at`, `updated_at`) VALUES
-(1, 'asf', '09-09-2024', '2024-09-10 14:58:29', '2024-09-10 14:58:29'),
-(2, 'santa rosa', '06-09-2024', '2024-09-10 17:01:22', '2024-09-10 17:01:22');
+(1, 'Día no laborable para el sector público', '07-10-2024', '2024-09-11 15:25:34', '2024-09-11 15:25:34'),
+(2, 'Combate de Angamos', '08-10-2024', '2024-09-11 15:25:52', '2024-09-11 15:25:52'),
+(3, 'Día de Todos los Santos', '01-11-2024', '2024-09-11 15:26:05', '2024-09-11 15:26:05'),
+(4, 'Día no laborable para el sector público', '06-12-2024', '2024-09-11 15:26:20', '2024-09-11 15:26:20'),
+(5, 'Inmaculada Concepción', '08-12-2024', '2024-09-11 15:26:35', '2024-09-11 15:26:35'),
+(6, 'Batalla de Ayacucho', '09-12-2024', '2024-09-11 15:26:53', '2024-09-11 15:26:53'),
+(7, 'Día no laborable para el sector público', '23-12-2024', '2024-09-11 15:27:05', '2024-09-11 15:27:05'),
+(8, 'Día no laborable para el sector público', '24-12-2024', '2024-09-11 15:27:16', '2024-09-11 15:27:16'),
+(9, 'Navidad', '25-12-2024', '2024-09-11 15:27:29', '2024-09-11 15:27:29'),
+(10, 'Día no laborable para el sector público', '30-12-2024', '2024-09-11 15:27:50', '2024-09-11 15:27:50'),
+(11, 'Día no laborable para el sector público', '31-12-2024', '2024-09-11 15:28:02', '2024-09-11 15:28:02');
 
 -- --------------------------------------------------------
 
@@ -365,15 +308,6 @@ CREATE TABLE `leaves_admins` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `leaves_admins`
---
-
-INSERT INTO `leaves_admins` (`id`, `user_id`, `leave_type`, `from_date`, `to_date`, `day`, `leave_reason`, `created_at`, `updated_at`) VALUES
-(1, 'KH_00003', 'Medical Leave', '17-09-2024', '18-09-2024', '1', 'asfasf', '2024-09-10 15:08:07', '2024-09-10 15:08:07'),
-(2, 'KH_00004', 'Loss of Pay', '10-09-2024', '11-09-2024', '1', 'asfasf', '2024-09-10 18:24:50', '2024-09-10 18:24:50'),
-(3, 'KH_00004', 'Loss of Pay', '10-09-2024', '27-09-2024', '17', 'asdasdasf', '2024-09-10 18:42:15', '2024-09-10 18:42:15');
 
 -- --------------------------------------------------------
 
@@ -452,36 +386,6 @@ CREATE TABLE `module_permissions` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `module_permissions`
---
-
-INSERT INTO `module_permissions` (`id`, `employee_id`, `module_permission`, `id_count`, `read`, `write`, `create`, `delete`, `import`, `export`, `created_at`, `updated_at`) VALUES
-(9, 'KH_00003', 'Holidays', '1', 'N', 'N', 'N', 'N', 'N', 'N', NULL, NULL),
-(10, 'KH_00003', 'Leaves', '2', 'Y', 'Y', 'Y', 'N', 'N', 'N', NULL, NULL),
-(11, 'KH_00003', 'Clients', '3', 'Y', 'Y', 'Y', 'N', 'N', 'N', NULL, NULL),
-(12, 'KH_00003', 'Projects', '4', 'Y', 'N', 'Y', 'N', 'N', 'N', NULL, NULL),
-(13, 'KH_00003', 'Tasks', '5', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(14, 'KH_00003', 'Chats', '6', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(15, 'KH_00003', 'Assets', '7', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(16, 'KH_00003', 'Timing Sheets', '8', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(17, 'KH_00001', 'Holidays', '1', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', NULL, NULL),
-(18, 'KH_00001', 'Leaves', '2', 'Y', 'Y', 'Y', 'N', 'N', 'N', NULL, NULL),
-(19, 'KH_00001', 'Clients', '3', 'Y', 'Y', 'Y', 'N', 'N', 'N', NULL, NULL),
-(20, 'KH_00001', 'Projects', '4', 'Y', 'N', 'Y', 'N', 'N', 'N', NULL, NULL),
-(21, 'KH_00001', 'Tasks', '5', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(22, 'KH_00001', 'Chats', '6', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(23, 'KH_00001', 'Assets', '7', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(24, 'KH_00001', 'Timing Sheets', '8', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(25, 'KH_00004', 'Holidays', '1', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', NULL, NULL),
-(26, 'KH_00004', 'Leaves', '2', 'Y', 'Y', 'Y', 'N', 'N', 'N', NULL, NULL),
-(27, 'KH_00004', 'Clients', '3', 'Y', 'Y', 'Y', 'N', 'N', 'N', NULL, NULL),
-(28, 'KH_00004', 'Projects', '4', 'Y', 'N', 'Y', 'N', 'N', 'N', NULL, NULL),
-(29, 'KH_00004', 'Tasks', '5', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(30, 'KH_00004', 'Chats', '6', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(31, 'KH_00004', 'Assets', '7', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
-(32, 'KH_00004', 'Timing Sheets', '8', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -524,13 +428,6 @@ CREATE TABLE `performance_appraisals` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `performance_appraisals`
---
-
-INSERT INTO `performance_appraisals` (`id`, `name`, `date`, `user_id`, `customer_experience`, `marketing`, `management`, `administration`, `presentation_skill`, `quality_of_Work`, `efficiency`, `integrity`, `professionalism`, `team_work`, `critical_thinking`, `conflict_management`, `attendance`, `ability_to_meet_deadline`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'asfasgsgag', '10-09-2024', 'KH_00002', 'Beginner', 'Intermediate', 'Beginner', 'Intermediate', 'Intermediate', 'Intermediate', 'Advanced', 'None', 'None', 'None', 'None', 'None', 'None', 'None', 'Active', '2024-09-10 18:28:06', '2024-09-10 18:28:06');
-
 -- --------------------------------------------------------
 
 --
@@ -559,13 +456,6 @@ CREATE TABLE `performance_indicators` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `performance_indicators`
---
-
-INSERT INTO `performance_indicators` (`id`, `user_id`, `designation`, `customer_eperience`, `marketing`, `management`, `administration`, `presentation_skill`, `quality_of_Work`, `efficiency`, `integrity`, `professionalism`, `team_work`, `critical_thinking`, `conflict_management`, `attendance`, `ability_to_meet_deadline`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'KH_00004', 'IT Management', 'Beginner', 'Beginner', 'Beginner', 'Beginner', 'Beginner', 'Intermediate', 'Beginner', 'Beginner', 'Beginner', 'Intermediate', 'Beginner', 'Advanced', 'Advanced', 'Intermediate', 'Active', '2024-09-10 18:26:02', '2024-09-10 18:26:02');
 
 -- --------------------------------------------------------
 
@@ -713,14 +603,6 @@ CREATE TABLE `profile_information` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `profile_information`
---
-
-INSERT INTO `profile_information` (`id`, `name`, `user_id`, `email`, `birth_date`, `gender`, `address`, `state`, `country`, `pin_code`, `phone_number`, `department`, `designation`, `reports_to`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'KH_00001', 'admin@gmail.com', '17-09-2002', 'Male', 'asdf', 'asd', 'asd', 'asd', '123', 'Web Development', 'Web Developer', 'Admin', '2024-09-10 14:45:29', '2024-09-10 14:45:29'),
-(2, 'cli', 'KH_00003', 'cli@cli', '09-09-2024', 'Male', 'asdf', 'asd', 'asd', 'asd', '12312312515', 'Web Development', 'Web Designer', 'Admin', '2024-09-10 16:28:04', '2024-09-10 16:30:34');
-
 -- --------------------------------------------------------
 
 --
@@ -763,7 +645,7 @@ CREATE TABLE `roles_permissions` (
 --
 
 INSERT INTO `roles_permissions` (`id`, `permissions_name`, `created_at`, `updated_at`) VALUES
-(1, 'Administrator', NULL, NULL),
+(1, 'Administrator', NULL, '2024-09-11 15:51:00'),
 (2, 'CEO', NULL, NULL),
 (3, 'Manager', NULL, NULL),
 (4, 'Team Leader', NULL, NULL),
@@ -808,14 +690,6 @@ CREATE TABLE `sequence_estimates` (
   `id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `sequence_estimates`
---
-
-INSERT INTO `sequence_estimates` (`id`) VALUES
-(1),
-(2);
-
 -- --------------------------------------------------------
 
 --
@@ -833,8 +707,9 @@ CREATE TABLE `sequence_tbls` (
 INSERT INTO `sequence_tbls` (`id`) VALUES
 (1),
 (2),
-(3),
-(4);
+(4),
+(6),
+(10);
 
 -- --------------------------------------------------------
 
@@ -863,13 +738,6 @@ CREATE TABLE `staff_salaries` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `staff_salaries`
---
-
-INSERT INTO `staff_salaries` (`id`, `name`, `user_id`, `salary`, `basic`, `da`, `hra`, `conveyance`, `allowance`, `medical_allowance`, `tds`, `esi`, `pf`, `leave`, `prof_tax`, `labour_welfare`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'KH_00001', '142142', '1123', '123', '12', '12', '12', '12', '123123', '123', '12', '3', '312', '123', '2024-09-10 18:15:04', '2024-09-10 18:15:04');
-
 -- --------------------------------------------------------
 
 --
@@ -888,13 +756,6 @@ CREATE TABLE `trainers` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `trainers`
---
-
-INSERT INTO `trainers` (`id`, `full_name`, `trainer_id`, `role`, `email`, `phone`, `status`, `description`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'KH_00001', 'asda', 'admin@gmail.com', '12312312', 'Inactive', 'asfasf', '2024-09-10 18:30:41', '2024-09-10 18:30:48');
 
 -- --------------------------------------------------------
 
@@ -918,13 +779,6 @@ CREATE TABLE `trainings` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Volcado de datos para la tabla `trainings`
---
-
-INSERT INTO `trainings` (`id`, `trainer_id`, `employees_id`, `training_type`, `trainer`, `employees`, `training_cost`, `start_date`, `end_date`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'KH_00001', 'KH_00002', 'Swift Training', 'Admin', 'asfasgsgag', 'asdasd', '10-09-2024', '10-09-2024', 'asdasdasd', 'Active', '2024-09-10 18:29:04', '2024-09-10 18:29:04');
-
 -- --------------------------------------------------------
 
 --
@@ -939,13 +793,6 @@ CREATE TABLE `training_types` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `training_types`
---
-
-INSERT INTO `training_types` (`id`, `type`, `description`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'asfasf', 'asfasf', 'Active', '2024-09-10 18:31:30', '2024-09-10 18:31:30');
 
 -- --------------------------------------------------------
 
@@ -1002,10 +849,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `user_id`, `email`, `join_date`, `phone_number`, `status`, `role_name`, `avatar`, `position`, `department`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'KH_00001', 'admin@gmail.com', 'Tue, Sep 10, 2024 9:44 AM', NULL, 'Active', 'Super Admin', '142351783.webp', NULL, NULL, NULL, '$2y$10$9l6HoEFzr/W1QaTy2JcU0usQmRVFsSyBpxA32zVBrVULycihRmVOG', NULL, '2024-09-10 14:44:05', '2024-09-10 15:22:19'),
-(2, 'asfasgsgag', 'KH_00002', 'asgfasgas@asfas', 'Tue, Sep 10, 2024 9:54 AM', NULL, 'Active', 'Employee', 'photo_defaults.jpg', NULL, NULL, NULL, '$2y$10$3gH29V8myxnGKnvuRxMoJO2CLqisVtk3X1UxS5.aAPUu2YMJOhOnO', NULL, '2024-09-10 14:54:40', '2024-09-10 14:54:40'),
-(3, 'cli', 'KH_00003', 'cli@cli', 'Tue, Sep 10, 2024 10:00 AM', NULL, 'Active', 'Client', 'photo_defaults.jpg', NULL, NULL, NULL, '$2y$10$jWXvuswfNH59zuqctjEWVe/zNk3Xn4UejFyB4.XsF8KmZjdeDcNo6', NULL, '2024-09-10 15:00:13', '2024-09-10 15:00:13'),
-(4, 'Mark', 'KH_00004', 'kiwina8342@acuxi.com', 'Tue, Sep 10, 2024 12:08 PM', NULL, 'Active', 'Super Admin', 'photo_defaults.jpg', NULL, NULL, NULL, '$2y$10$j2L2HbaU/BHKDlYhO2gMa.pcbytMInkyxXpnl4R9oWx4xxbC26kxm', NULL, '2024-09-10 17:08:42', '2024-09-10 17:08:42');
+(1, 'Mark', 'KH_00001', 'admin@gmail.com', 'Wed, Sep 11, 2024 10:14 AM', '+51 974 981 999', 'Active', 'Admin', '579162795.png', NULL, NULL, NULL, '$2y$10$pDFQXkz184R2xO9f2KjD5OW8Ywf5OFxj4SFx/U1VX3U/Fs8U7QxjK', NULL, '2024-09-11 15:14:25', '2024-09-11 15:45:01'),
+(2, 'Anyelo', 'KH_00002', 'anyelo@gmail.com', 'Wed, Sep 11, 2024 10:17 AM', '+51 954 142 637', 'Active', 'Super Admin', '169534294.png', NULL, NULL, NULL, '$2y$10$tElhqBj.sPRTzLIRrAySB.aO7RnKwHJu8iWtfjuxcya51DsWSIVia', NULL, '2024-09-11 15:17:23', '2024-09-11 15:43:56'),
+(4, 'Jean', 'KH_00004', 'jean@gmail.com', 'Wed, Sep 11, 2024 10:18 AM', '+51 995 491 811', 'Active', 'Employee', '1654259294.png', 'Web Developer', 'Web Department', NULL, '$2y$10$ObR0GdkP0qctdBj.GQ7yrOmbQk00BQOVa46H1V4Xmlzd8tUgQ9./.', NULL, '2024-09-11 15:18:14', '2024-09-11 15:43:37'),
+(6, 'Harold', 'KH_00006', 'harold@gmail.com', 'Wed, Sep 11, 2024 10:19 AM', '+51 976 189 212', 'Inactive', 'Client', '1943406323.png', 'Android Developer', 'IT Management', NULL, '$2y$10$bOYfIKmBq7pewyzuHAS/d.mABYEMmEYUAHBgzU3f9BIPRyNvNI8oG', NULL, '2024-09-11 15:19:06', '2024-09-11 15:47:03'),
+(10, 'Camote', 'KH_00010', 'camote@gmail.com', 'Wed, Sep 11, 2024 10:20 AM', '+51 903 428 653', 'Disable', 'Normal User', '1762299181.png', NULL, NULL, NULL, '$2y$10$oWJvoMc.WUOgmg7Q4we64uLGUucxR2k/leJTjKyvU49pcMEp/7kRW', NULL, '2024-09-11 15:20:04', '2024-09-11 15:46:57');
 
 --
 -- Disparadores `users`
@@ -1036,6 +884,31 @@ CREATE TABLE `user_activity_logs` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `user_activity_logs`
+--
+
+INSERT INTO `user_activity_logs` (`id`, `user_name`, `email`, `phone_number`, `status`, `role_name`, `modify_user`, `date_time`, `created_at`, `updated_at`) VALUES
+(1, 'Mark', 'admin@gmail.com', NULL, 'Active', 'Admin', 'Update', 'Wed, Sep 11, 2024 10:16 AM', NULL, NULL),
+(2, 'Camote', 'camote@gmail.com', NULL, 'Active', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:21 AM', NULL, NULL),
+(3, 'Camote', 'camote@gmail.com', NULL, 'Active', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:21 AM', NULL, NULL),
+(4, 'Anyelo', 'anyelo@gmail.com', NULL, 'Active', 'Super Admin', 'Update', 'Wed, Sep 11, 2024 10:22 AM', NULL, NULL),
+(5, 'Harold', 'harold@gmail.com', NULL, 'Active', 'Client', 'Update', 'Wed, Sep 11, 2024 10:22 AM', NULL, NULL),
+(6, 'Jean', 'jean@gmail.com', NULL, 'Active', 'Employee', 'Update', 'Wed, Sep 11, 2024 10:23 AM', NULL, NULL),
+(7, 'Jean', 'jean@gmail.com', NULL, 'Active', 'Employee', 'Update', 'Wed, Sep 11, 2024 10:42 AM', NULL, NULL),
+(8, 'Harold', 'harold@gmail.com', NULL, 'Active', 'Client', 'Update', 'Wed, Sep 11, 2024 10:42 AM', NULL, NULL),
+(9, 'Jean', 'jean@gmail.com', '912123123', 'Active', 'Employee', 'Update', 'Wed, Sep 11, 2024 10:43 AM', NULL, NULL),
+(10, 'Jean', 'jean@gmail.com', '+51 995 491 811', 'Active', 'Employee', 'Update', 'Wed, Sep 11, 2024 10:43 AM', NULL, NULL),
+(11, 'Anyelo', 'anyelo@gmail.com', '+51 954 142 637', 'Active', 'Super Admin', 'Update', 'Wed, Sep 11, 2024 10:43 AM', NULL, NULL),
+(12, 'Camote', 'camote@gmail.com', '+51 903 428 653', 'Active', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:44 AM', NULL, NULL),
+(13, 'Harold', 'harold@gmail.com', '+51 976 189 212', 'Active', 'Client', 'Update', 'Wed, Sep 11, 2024 10:44 AM', NULL, NULL),
+(14, 'Mark', 'admin@gmail.com', '974981999', 'Active', 'Admin', 'Update', 'Wed, Sep 11, 2024 10:44 AM', NULL, NULL),
+(15, 'Mark', 'admin@gmail.com', '+51 974981999', 'Active', 'Admin', 'Update', 'Wed, Sep 11, 2024 10:44 AM', NULL, NULL),
+(16, 'Mark', 'admin@gmail.com', '+51 974 981 999', 'Active', 'Admin', 'Update', 'Wed, Sep 11, 2024 10:45 AM', NULL, NULL),
+(17, 'Camote', 'camote@gmail.com', '+51 903 428 653', 'Inactive', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:46 AM', NULL, NULL),
+(18, 'Camote', 'camote@gmail.com', '+51 903 428 653', 'Disable', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:46 AM', NULL, NULL),
+(19, 'Harold', 'harold@gmail.com', '+51 976 189 212', 'Inactive', 'Client', 'Update', 'Wed, Sep 11, 2024 10:47 AM', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1298,13 +1171,13 @@ ALTER TABLE `user_types`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `add_jobs`
 --
 ALTER TABLE `add_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `answers`
@@ -1316,43 +1189,43 @@ ALTER TABLE `answers`
 -- AUTO_INCREMENT de la tabla `apply_for_jobs`
 --
 ALTER TABLE `apply_for_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `departments`
 --
 ALTER TABLE `departments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `estimates`
 --
 ALTER TABLE `estimates`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `estimates_adds`
 --
 ALTER TABLE `estimates_adds`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `expenses`
 --
 ALTER TABLE `expenses`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -1364,13 +1237,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT de la tabla `holidays`
 --
 ALTER TABLE `holidays`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `leaves_admins`
 --
 ALTER TABLE `leaves_admins`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
@@ -1382,19 +1255,19 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `module_permissions`
 --
 ALTER TABLE `module_permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `performance_appraisals`
 --
 ALTER TABLE `performance_appraisals`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `performance_indicators`
 --
 ALTER TABLE `performance_indicators`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `performance_indicator_lists`
@@ -1430,7 +1303,7 @@ ALTER TABLE `position_types`
 -- AUTO_INCREMENT de la tabla `profile_information`
 --
 ALTER TABLE `profile_information`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `questions`
@@ -1454,37 +1327,37 @@ ALTER TABLE `role_type_users`
 -- AUTO_INCREMENT de la tabla `sequence_estimates`
 --
 ALTER TABLE `sequence_estimates`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `sequence_tbls`
 --
 ALTER TABLE `sequence_tbls`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `staff_salaries`
 --
 ALTER TABLE `staff_salaries`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `trainers`
 --
 ALTER TABLE `trainers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `trainings`
 --
 ALTER TABLE `trainings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `training_types`
 --
 ALTER TABLE `training_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `type_jobs`
@@ -1496,13 +1369,13 @@ ALTER TABLE `type_jobs`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `user_activity_logs`
 --
 ALTER TABLE `user_activity_logs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `user_types`

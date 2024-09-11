@@ -16,7 +16,7 @@
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_leave"><i class="fa fa-plus"></i> Add Descanso</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_leave"><i class="fa fa-plus"></i> Agregar Descanso</a>
                     </div>
                 </div>
             </div>
@@ -24,25 +24,25 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Today Presents</h6>
+                        <h6>Presentes de hoy</h6>
                         <h4>12 / 60</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Planned Leaves</h6>
-                        <h4>8 <span>Today</span></h4>
+                        <h6>Descansos Planeados</h6>
+                        <h4>8 <span>Hoy</span></h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Unplanned Leaves</h6>
-                        <h4>0 <span>Today</span></h4>
+                        <h6>Descansos no planificados</h6>
+                        <h4>0 <span>Hoy</span></h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stats-info">
-                        <h6>Pending Requests</h6>
+                        <h6>Solicitudes pendientes</h6>
                         <h4>12</h4>
                     </div>
                 </div>
@@ -54,29 +54,29 @@
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus">
                         <input type="text" class="form-control floating">
-                        <label class="focus-label">Employee Name</label>
+                        <label class="focus-label">Nombre del empleado</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus select-focus">
                         <select class="select floating">
                             <option> -- Select -- </option>
-                            <option>Casual Leave</option>
-                            <option>Medical Leave</option>
-                            <option>Loss of Pay</option>
+                            <option>Licencia informal</option>
+                            <option>Licencia Médica</option>
+                            <option>Pérdida de salario</option>
                         </select>
-                        <label class="focus-label">Leave Type</label>
+                        <label class="focus-label">Tipo de licencia</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus select-focus">
                         <select class="select floating">
-                            <option> -- Select -- </option>
-                            <option> Pending </option>
-                            <option> Approved </option>
-                            <option> Rejected </option>
+                            <option> -- Seleccionar -- </option>
+                            <option> Pendiente</option>
+                            <option> Aprobado </option>
+                            <option> Rechazado </option>
                         </select>
-                        <label class="focus-label">Leave Status</label>
+                        <label class="focus-label">Estado de licencias</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
@@ -84,7 +84,7 @@
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
                         </div>
-                        <label class="focus-label">From</label>
+                        <label class="focus-label">De</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
@@ -92,11 +92,11 @@
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
                         </div>
-                        <label class="focus-label">To</label>
+                        <label class="focus-label">A</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                    <a href="#" class="btn btn-success btn-block"> Buscar </a>
                 </div>
             </div>
             <!-- /Search Filter -->
@@ -110,14 +110,14 @@
                         <table class="table table-striped custom-table mb-0 datatable">
                             <thead>
                                 <tr>
-                                    <th>Employee</th>
-                                    <th>Leave Type</th>
-                                    <th>From</th>
-                                    <th>To</th>
-                                    <th>No of Days</th>
-                                    <th>Reason</th>
-                                    <th class="text-center">Status</th>
-                                    <th class="text-right">Actions</th>
+                                    <th>Empleado</th>
+                                    <th>Tipo de licencia</th>
+                                    <th>De</th>
+                                    <th>A</th>
+                                    <th>Número de días</th>
+                                    <th>Razón</th>
+                                    <th class="text-center">Estado</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
 

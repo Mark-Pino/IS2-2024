@@ -8,10 +8,10 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">User Activity Log</h3>
+                        <h3 class="page-title">Actividad usuarios</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">User Activity Log</li>
+                            <li class="breadcrumb-item active">Actividad usuarios</li>
                         </ul>
                     </div>
                 </div>
@@ -26,13 +26,13 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Full Name</th>
-                                    <th>Email Address</th>
-                                    <th>Phone Number</th>
-                                    <th>Status</th>
-                                    <th>Role Name</th>
-                                    <th>Modify</th>
-                                    <th>Date Time</th>
+                                    <th>Nombre</th>
+                                    <th>Correo</th>
+                                    <th>Cel</th>
+                                    <th>Estado</th>
+                                    <th>Rol</th>
+                                    <th>Modificado</th>
+                                    <th>Fecha y hora</th>
                                 </tr>
                             </thead>
                             <tbody>

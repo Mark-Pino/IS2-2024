@@ -8,14 +8,14 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">User Management</h3>
+                        <h3 class="page-title">Administración de Usuarios</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">User</li>
+                            <li class="breadcrumb-item active">Usurios</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_user"><i class="fa fa-plus"></i> Add User</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_user"><i class="fa fa-plus"></i> Agregar Usuario</a>
                     </div>
                 </div>
             </div>
@@ -25,29 +25,29 @@
             <form action="{{ route('search/user/list') }}" method="POST">
                 @csrf
                 <div class="row filter-row">
-                    <div class="col-sm-6 col-md-3">  
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating" id="name" name="name">
-                            <label class="focus-label">User Name</label>
+                            <label class="focus-label">Nombre de Usuario</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">  
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating" id="name" name="role_name">
-                            <label class="focus-label">Role Name</label>
+                            <label class="focus-label">Nombre del Role</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3"> 
+                    <div class="col-sm-6 col-md-3">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating" id="name" name="status">
-                            <label class="focus-label">Status</label>
+                            <label class="focus-label">Estado</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-md-3">  
-                        <button type="sumit" class="btn btn-success btn-block"> Search </button>  
+                    <div class="col-sm-6 col-md-3">
+                        <button type="sumit" class="btn btn-success btn-block"> Buscar </button>
                     </div>
                 </div>
-            </form>     
+            </form>
             <!-- /Search Filter -->
             {{-- message --}}
             {!! Toastr::message() !!}
@@ -57,17 +57,17 @@
                         <table class="table table-striped custom-table datatable">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
+                                    <th>Nombre</th>
                                     <th>User ID</th>
                                     <th hidden></th>
-                                    <th>Email</th>
-                                    <th>Position</th>
-                                    <th>Phone</th>
-                                    <th>Join Date</th>
-                                    <th>Role</th>
-                                    <th>Status</th>
-                                    <th>Departement</th>
-                                    <th class="text-right">Action</th>
+                                    <th>Correo</th>
+                                    <th>Puesto</th>
+                                    <th>Cel</th>
+                                    <th>Fecha de ingreso</th>
+                                    <th>Rol</th>
+                                    <th>Estado</th>
+                                    <th>Departamento</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -122,7 +122,7 @@
                                                     <span class="statuss">N/A</span>
                                                 </a>
                                             @endif
-                                            
+
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a class="dropdown-item" href="#">
                                                     <i class="fa fa-dot-circle-o text-success"></i> Active
@@ -155,14 +155,14 @@
             </div>
         </div>
         <!-- /Page Content -->
-        
+
 
         <!-- Add User Modal -->
         <div id="add_user" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add New User</h5>
+                        <h5 class="modal-title">Agregar nuevo usuario</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -170,21 +170,21 @@
                     <div class="modal-body">
                         <form action="{{ route('user/add/save') }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
+                            <div class="row">
+                                <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Full Name</label>
+                                        <label>Nombre</label>
                                         <input class="form-control @error('name') is-invalid @enderror" type="text" id="" name="name" value="{{ old('name') }}" placeholder="Enter Name">
                                     </div>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Emaill Address</label>
+                                <div class="col-sm-6">
+                                    <label>Correo</label>
                                     <input class="form-control" type="email" id="" name="email" placeholder="Enter Email">
                                 </div>
                             </div>
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
-                                    <label>Role Name</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Rol</label>
                                     <select class="select" name="role_name" id="role_name">
                                         <option selected disabled> --Select --</option>
                                         @foreach ($role_name as $role )
@@ -192,8 +192,8 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Position</label>
+                                <div class="col-sm-6">
+                                    <label>Puesto</label>
                                     <select class="select" name="position" id="position">
                                         <option selected disabled> --Select --</option>
                                         @foreach ($position as $positions )
@@ -203,15 +203,15 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
+                            <div class="row">
+                                <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Phone</label>
+                                        <label>Cel</label>
                                         <input class="form-control" type="tel" id="" name="phone" placeholder="Enter Phone">
                                     </div>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Department</label>
+                                <div class="col-sm-6">
+                                    <label>Departamento</label>
                                     <select class="select" name="department" id="department">
                                         <option selected disabled> --Select --</option>
                                         @foreach ($department as $departments )
@@ -220,9 +220,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
-                                    <label>Status</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Estado</label>
                                     <select class="select" name="status" id="status">
                                         <option selected disabled> --Select --</option>
                                         @foreach ($status_user as $status )
@@ -230,26 +230,26 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Photo</label>
+                                <div class="col-sm-6">
+                                    <label>Foto de perfil</label>
                                     <input class="form-control" type="file" id="image" name="image">
                                 </div>
                             </div>
                             <br>
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
+                            <div class="row">
+                                <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Password</label>
+                                        <label>Contraseña</label>
                                         <input type="password" class="form-control" name="password" placeholder="Enter Password">
                                     </div>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Repeat Password</label>
+                                <div class="col-sm-6">
+                                    <label>Repita la Contraseña</label>
                                     <input type="password" class="form-control" name="password_confirmation" placeholder="Choose Repeat Password">
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Agregar</button>
                             </div>
                         </form>
                     </div>
@@ -257,13 +257,13 @@
             </div>
         </div>
         <!-- /Add User Modal -->
-				
+
         <!-- Edit User Modal -->
         <div id="edit_user" class="modal custom-modal fade" role="dialog">
             <div class="modal-dialog modal-dialog-centered modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit User</h5>
+                        <h5 class="modal-title">Editar Usuario</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -273,29 +273,29 @@
                         <form action="{{ route('update') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="user_id" id="e_id" value="">
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
+                            <div class="row">
+                                <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Name</label>
+                                        <label>nombre</label>
                                         <input class="form-control" type="text" name="name" id="e_name" value="" />
                                     </div>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Email</label>
+                                <div class="col-sm-6">
+                                    <label>Correo</label>
                                     <input class="form-control" type="text" name="email" id="e_email" value=""/>
                                 </div>
                             </div>
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
-                                    <label>Role Name</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Rol</label>
                                     <select class="select" name="role_name" id="e_role_name">
                                         @foreach ($role_name as $role )
                                         <option value="{{ $role->role_type }}">{{ $role->role_type }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Position</label>
+                                <div class="col-sm-6">
+                                    <label>Puesto</label>
                                     <select class="select" name="position" id="e_position">
                                         @foreach ($position as $positions )
                                         <option value="{{ $positions->position }}">{{ $positions->position }}</option>
@@ -304,15 +304,15 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
+                            <div class="row">
+                                <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Phone</label>
+                                        <label>Cel</label>
                                         <input class="form-control" type="text" id="e_phone_number" name="phone" placeholder="Enter Phone">
                                     </div>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Department</label>
+                                <div class="col-sm-6">
+                                    <label>Departamento</label>
                                     <select class="select" name="department" id="e_department">
                                         @foreach ($department as $departments )
                                         <option value="{{ $departments->department }}">{{ $departments->department }}</option>
@@ -320,24 +320,24 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="row"> 
-                                <div class="col-sm-6"> 
-                                    <label>Status</label>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label>Estado</label>
                                     <select class="select" name="status" id="e_status">
                                         @foreach ($status_user as $status )
                                         <option value="{{ $status->type_name }}">{{ $status->type_name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-sm-6"> 
-                                    <label>Photo</label>
+                                <div class="col-sm-6">
+                                    <label>Foto</label>
                                     <input class="form-control" type="file" id="image" name="images">
                                     <input type="hidden" name="hidden_image" id="e_image" value="">
                                 </div>
                             </div>
                             <br>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Update</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Actualizar</button>
                             </div>
                         </form>
                     </div>
@@ -345,15 +345,15 @@
             </div>
         </div>
         <!-- /Edit Salary Modal -->
-				
+
         <!-- Delete User Modal -->
         <div class="modal custom-modal fade" id="delete_user" role="dialog">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete User</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Borrar Usurio</h3>
+                            <p>¿Estás seguro de que quieres eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <form action="{{ route('user/delete') }}" method="POST">
@@ -362,10 +362,10 @@
                                 <input type="hidden" name="avatar" class="e_avatar" value="">
                                 <div class="row">
                                     <div class="col-6">
-                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Delete</button>
+                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Borrar</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>
@@ -404,7 +404,7 @@
             var statuss = (_this.find(".statuss").text());
             var _option = '<option selected value="' +statuss+ '">' + _this.find('.statuss').text() + '</option>'
             $( _option).appendTo("#e_status");
-            
+
         });
     </script>
     {{-- delete js --}}

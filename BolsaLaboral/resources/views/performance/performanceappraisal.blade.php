@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_appraisal"><i class="fa fa-plus"></i> Add New</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_appraisal"><i class="fa fa-plus"></i> Agregar nuevo</a>
                     </div>
                 </div>
             </div>
@@ -31,11 +31,11 @@
                             <thead>
                                 <tr>
                                     <th style="width: 30px;">#</th>
-                                    <th>Employee</th>
-                                    <th>Department</th>
-                                    <th>Appraisal Date</th>
-                                    <th>Status</th>
-                                    <th class="text-right">Action</th>
+                                    <th>Empleado</th>
+                                    <th>Departamento</th>
+                                    <th>Fecha de valoración</th>
+                                    <th>Estado</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,11 +73,11 @@
                                     <td>
                                         <div class="dropdown action-label">
                                             <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                <i class="fa fa-dot-circle-o text-success"></i> Activo
                                             </a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Activo</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactivo</a>
                                             </div>
                                         </div>
                                     </td>
@@ -86,7 +86,7 @@
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a class="dropdown-item edit_appraisal" href="#" data-toggle="modal" data-target="#edit_appraisal"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item delete_appraisal" href="#" data-toggle="modal" data-target="#delete_appraisal"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item delete_appraisal" href="#" data-toggle="modal" data-target="#delete_appraisal"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>

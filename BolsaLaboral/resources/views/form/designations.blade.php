@@ -32,9 +32,9 @@
                             <thead>
                                 <tr>
                                     <th style="width: 30px;">#</th>
-                                    <th>Designation </th>
-                                    <th>Department </th>
-                                    <th class="text-right">Action</th>
+                                    <th>Designación </th>
+                                    <th>Departamento </th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>

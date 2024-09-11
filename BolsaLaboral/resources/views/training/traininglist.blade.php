@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_training"><i class="fa fa-plus"></i> Add New </a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_training"><i class="fa fa-plus"></i> Agregar nuevo </a>
                     </div>
                 </div>
             </div>
@@ -31,14 +31,14 @@
                             <thead>
                                 <tr>
                                     <th style="width: 30px;">#</th>
-                                    <th>Training Type</th>
-                                    <th>Trainer</th>
-                                    <th>Employee</th>
-                                    <th>Time Duration</th>
-                                    <th>Description </th>
-                                    <th>Cost </th>
-                                    <th>Status </th>
-                                    <th class="text-right">Action</th>
+                                    <th>Tipo de entrenamiento</th>
+                                    <th>Tentrenador</th>
+                                    <th>Empleado</th>
+                                    <th>Duración del tiempo</th>
+                                    <th>Descripción </th>
+                                    <th>Costo </th>
+                                    <th>Estado </th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -110,7 +110,7 @@
                                                             <li class="page-item">
                                                                 <a class="page-link" href="#" aria-label="Previous">
                                                                     <span aria-hidden="true">«</span>
-                                                                    <span class="sr-only">Previous</span>
+                                                                    <span class="sr-only">Previo</span>
                                                                 </a>
                                                             </li>
                                                             <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -118,7 +118,7 @@
                                                             <li class="page-item">
                                                                 <a class="page-link" href="#" aria-label="Next">
                                                                     <span aria-hidden="true">»</span>
-                                                                    <span class="sr-only">Next</span>
+                                                                    <span class="sr-only">Próximo</span>
                                                                 </a>
                                                             </li>
                                                         </ul>
@@ -141,8 +141,8 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item edit_training" href="#" data-toggle="modal" data-target="#edit_training"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item delete_training" href="#" data-toggle="modal" data-target="#delete_training"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item edit_training" href="#" data-toggle="modal" data-target="#edit_training"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item delete_training" href="#" data-toggle="modal" data-target="#delete_training"><i class="fa fa-trash-o m-r-5"></i> Borrar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -161,7 +161,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add New Training</h5>
+                        <h5 class="modal-title">Agregar nueva capacitación</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

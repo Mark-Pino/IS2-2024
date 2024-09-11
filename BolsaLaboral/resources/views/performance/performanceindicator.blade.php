@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_indicator"><i class="fa fa-plus"></i> Add New</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_indicator"><i class="fa fa-plus"></i> Agregar nuevo</a>
                     </div>
                 </div>
             </div>
@@ -31,12 +31,12 @@
                             <thead>
                                 <tr>
                                     <th style="width: 30px;">#</th>
-                                    <th>Designation</th>
-                                    <th>Department</th>
-                                    <th>Added By</th>
-                                    <th>Create At</th>
-                                    <th>Status</th>
-                                    <th class="text-right">Action</th>
+                                    <th>Designación</th>
+                                    <th>Departamento</th>
+                                    <th>Añadido por</th>
+                                    <th>Crear en</th>
+                                    <th>Estado</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -73,11 +73,11 @@
                                     <td>
                                         <div class="dropdown action-label">
                                             <a class="btn btn-white btn-sm btn-rounded dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-dot-circle-o text-success"></i> Active
+                                                <i class="fa fa-dot-circle-o text-success"></i> Activo
                                             </a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Activo</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactivo</a>
                                             </div>
                                         </div>
                                     </td>
@@ -85,8 +85,8 @@
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
-                                                <a class="dropdown-item edit_indicator" href="#" data-toggle="modal" data-target="#edit_indicator"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item delete_indicator" href="#" data-toggle="modal" data-target="#delete_indicator"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item edit_indicator" href="#" data-toggle="modal" data-target="#edit_indicator"><i class="fa fa-pencil m-r-5"></i> Editar</a>
+                                                <a class="dropdown-item delete_indicator" href="#" data-toggle="modal" data-target="#delete_indicator"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -105,7 +105,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Set New Indicator</h5>
+                        <h5 class="modal-title">Establecer nuevo indicador</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -117,9 +117,9 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Designation</label>
+                                        <label class="col-form-label">Designación</label>
                                         <select class="select" id="designation" name="designation">
-                                            <option selected disabled>--Select Designation--</option>
+                                            <option selected disabled>--Seleccione Designación--</option>
                                             @foreach ($departments as $department )
                                             <option value="{{ $department->department }}">{{ $department->department }}</option>
                                             @endforeach
@@ -127,9 +127,9 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h4 class="modal-sub-title">Technical</h4>
+                                    <h4 class="modal-sub-title">Técnico</h4>
                                     <div class="form-group">
-                                        <label class="col-form-label">Customer Experience</label>
+                                        <label class="col-form-label">Experiencia del cliente</label>
                                         <select class="select" id="customer_eperience" name="customer_eperience">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -145,7 +145,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Management</label>
+                                        <label class="col-form-label">Gestión</label>
                                         <select class="select" id="management" name="management">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -153,7 +153,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Administration</label>
+                                        <label class="col-form-label">Administración</label>
                                         <select class="select" id="administration" name="administration">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -161,7 +161,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Presentation Skill</label>
+                                        <label class="col-form-label">Habilidad de presentación</label>
                                         <select class="select" id="presentation_skill" name="presentation_skill">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -169,7 +169,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Quality Of Work</label>
+                                        <label class="col-form-label">Calidad del trabajo</label>
                                         <select class="select" id="quality_of_Work" name="quality_of_Work">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -177,7 +177,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Efficiency</label>
+                                        <label class="col-form-label">Eficiencia</label>
                                         <select class="select" id="efficiency" name="efficiency">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -186,9 +186,9 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h4 class="modal-sub-title">Organizational</h4>
+                                    <h4 class="modal-sub-title">Organizativo</h4>
                                     <div class="form-group">
-                                        <label class="col-form-label">Integrity</label>
+                                        <label class="col-form-label">Integridad</label>
                                         <select class="select" id="integrity" name="integrity">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -196,7 +196,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Professionalism</label>
+                                        <label class="col-form-label">Profesionalismo</label>
                                         <select class="select" id="professionalism" name="professionalism">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -204,7 +204,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Team Work</label>
+                                        <label class="col-form-label">Trabajo en equipo</label>
                                         <select class="select" id="team_work" name="team_work">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -212,7 +212,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Critical Thinking</label>
+                                        <label class="col-form-label">Pensamiento crítico</label>
                                         <select class="select" id="critical_thinking" name="critical_thinking">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -220,7 +220,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Conflict Management</label>
+                                        <label class="col-form-label">Gestión de conflictos</label>
                                         <select class="select" id="conflict_management" name="conflict_management">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -228,7 +228,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Attendance</label>
+                                        <label class="col-form-label">Espera</label>
                                         <select class="select" id="attendance" name="attendance">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -236,7 +236,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group">
-                                        <label class="col-form-label">Ability To Meet Deadline</label>
+                                        <label class="col-form-label">Capacidad para cumplir con el plazo</label>
                                         <select class="select" id="ability_to_meet_deadline" name="ability_to_meet_deadline">
                                             @foreach ($indicator as $indicators )
                                             <option value="{{ $indicators->per_name_list }}">{{ $indicators->per_name_list }}</option>
@@ -246,16 +246,16 @@
                                 </div>
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Status</label>
+                                        <label class="col-form-label">Estado</label>
                                         <select class="select" id="status" name="status">
-                                            <option value="Active">Active</option>
-                                            <option value="Inactive">Inactive</option>
+                                            <option value="Active">Activo</option>
+                                            <option value="Inactive">Inactivo</option>
                                         </select>
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Agregar</button>
                             </div>
                         </form>
                     </div>
@@ -269,7 +269,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Performance Indicator</h5>
+                        <h5 class="modal-title">Editar indicador de rendimiento</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -281,7 +281,7 @@
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <label class="col-form-label">Designation</label>
+                                        <label class="col-form-label">Designación</label>
                                         <select class="select" id="e_designation" name="designation">
                                             @foreach ($departments as $department )
                                             <option value="{{ $department->department }}">{{ $department->department }}</option>
@@ -290,7 +290,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h4 class="modal-sub-title">Technical</h4>
+                                    <h4 class="modal-sub-title">Técnico</h4>
                                     <div class="form-group">
                                         <label class="col-form-label">Customer Experience</label>
                                         <select class="select" id="e_customer_eperience" name="customer_eperience">

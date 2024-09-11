@@ -33,7 +33,7 @@ class UserManagementController extends Controller
         {
             return redirect()->route('home');
         }
-        
+
     }
     // search user
     public function searchUser(Request $request)
@@ -97,14 +97,14 @@ class UserManagementController extends Controller
                                 ->where('status','LIKE','%'.$request->status.'%')
                                 ->get();
             }
-           
+
             return view('usermanagement.user_control',compact('users','role_name','position','department','status_user','result'));
         }
         else
         {
             return redirect()->route('home');
         }
-    
+
     }
 
     // use activity log
@@ -122,7 +122,7 @@ class UserManagementController extends Controller
 
     // profile user
     public function profile()
-    {   
+    {
         $profile = Session::get('user_id'); // get user_id session
         $userInformation = PersonalInformation::where('user_id',$profile)->first(); // user information
         $user = DB::table('users')->get();
@@ -142,7 +142,7 @@ class UserManagementController extends Controller
             } else {
                 $information = ProfileInformation::all();
                 return view('usermanagement.profile_user',compact('information','user','userInformation'));
-            } 
+            }
         }
     }
 
@@ -175,7 +175,7 @@ class UserManagementController extends Controller
                     'avatar' => $image_name,
                 ];
                 User::where('user_id',$request->user_id)->update($update);
-            } 
+            }
 
             $information = ProfileInformation::updateOrCreate(['user_id' => $request->user_id]);
             $information->name         = $request->name;
@@ -192,7 +192,7 @@ class UserManagementController extends Controller
             $information->designation  = $request->designation;
             $information->reports_to   = $request->reports_to;
             $information->save();
-            
+
             DB::commit();
             Toastr::success('Profile Information successfully :)','Success');
             return redirect()->back();
@@ -202,7 +202,7 @@ class UserManagementController extends Controller
             return redirect()->back();
         }
     }
-   
+
     // save new user
     public function addNewUserSave(Request $request)
     {
@@ -223,7 +223,7 @@ class UserManagementController extends Controller
             $dt       = Carbon::now();
             $todayDate = $dt->toDayDateTimeString();
 
-            $image = time().'.'.$request->image->extension();  
+            $image = time().'.'.$request->image->extension();
             $request->image->move(public_path('assets/images'), $image);
 
             $user = new User;
@@ -247,7 +247,7 @@ class UserManagementController extends Controller
             return redirect()->back();
         }
     }
-    
+
     // update
     public function update(Request $request)
     {
@@ -275,7 +275,7 @@ class UserManagementController extends Controller
                 }
             }
             else{
-                
+
                 if($image != '')
                 {
                     unlink('assets/images/'.$image_name);
@@ -283,7 +283,7 @@ class UserManagementController extends Controller
                     $image->move(public_path('/assets/images/'), $image_name);
                 }
             }
-            
+
             $update = [
 
                 'user_id'       => $user_id,
@@ -358,7 +358,7 @@ class UserManagementController extends Controller
             DB::commit();
             Toastr::success('User deleted successfully :)','Success');
             return redirect()->route('userManagement');
-            
+
         }catch(\Exception $e){
             DB::rollback();
             Toastr::error('User deleted fail :)','Error');
@@ -371,7 +371,7 @@ class UserManagementController extends Controller
     {
         return view('settings.changepassword');
     }
-    
+
     // change password in db
     public function changePasswordDB(Request $request)
     {

@@ -46,7 +46,7 @@ class LeavesController extends Controller
             $leaves->day           = $days;
             $leaves->leave_reason  = $request->leave_reason;
             $leaves->save();
-            
+
             DB::commit();
             Toastr::success('Create new Leaves successfully :)','Success');
             return redirect()->back();
@@ -96,7 +96,7 @@ class LeavesController extends Controller
             LeavesAdmin::destroy($request->id);
             Toastr::success('Leaves admin deleted successfully :)','Success');
             return redirect()->back();
-        
+
         } catch(\Exception $e) {
 
             DB::rollback();

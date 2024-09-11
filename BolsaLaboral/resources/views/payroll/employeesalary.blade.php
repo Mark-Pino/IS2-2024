@@ -19,7 +19,7 @@
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_salary"><i class="fa fa-plus"></i> Add Salario</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_salary"><i class="fa fa-plus"></i> Agregar Salario</a>
                     </div>
                 </div>
             </div>
@@ -29,28 +29,28 @@
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus">
                         <input type="text" class="form-control floating">
-                        <label class="focus-label">Employee Name</label>
+                        <label class="focus-label">Nombre del empleado</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus select-focus">
                         <select class="select floating">
-                            <option value=""> -- Select -- </option>
-                            <option value="">Employee</option>
-                            <option value="1">Manager</option>
+                            <option value=""> -- Seleccionar -- </option>
+                            <option value="">Empleado</option>
+                            <option value="1">Gerente</option>
                         </select>
-                        <label class="focus-label">Role</label>
+                        <label class="focus-label">Rol</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                     <div class="form-group form-focus select-focus">
                         <select class="select floating">
-                            <option> -- Select -- </option>
-                            <option> Pending </option>
-                            <option> Approved </option>
-                            <option> Rejected </option>
+                            <option> -- Seleccionar -- </option>
+                            <option> Pendiente </option>
+                            <option> Aprobado </option>
+                            <option> Rechazado </option>
                         </select>
-                        <label class="focus-label">Leave Status</label>
+                        <label class="focus-label">Estado de salida</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
@@ -58,7 +58,7 @@
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
                         </div>
-                        <label class="focus-label">From</label>
+                        <label class="focus-label">De</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
@@ -66,11 +66,11 @@
                         <div class="cal-icon">
                             <input class="form-control floating datetimepicker" type="text">
                         </div>
-                        <label class="focus-label">To</label>
+                        <label class="focus-label">A</label>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                    <a href="#" class="btn btn-success btn-block"> Search </a>
+                    <a href="#" class="btn btn-success btn-block"> Buscar </a>
                 </div>
             </div>
             <!-- /Search Filter -->
@@ -80,14 +80,14 @@
                         <table class="table table-striped custom-table datatable">
                             <thead>
                                 <tr>
-                                    <th>Employee</th>
-                                    <th>Employee ID</th>
-                                    <th>Email</th>
-                                    <th>Join Date</th>
-                                    <th>Role</th>
-                                    <th>Salary</th>
-                                    <th>Payslip</th>
-                                    <th class="text-right">Action</th>
+                                    <th>Empleado</th>
+                                    <th>ID de empleado</th>
+                                    <th>Correo</th>
+                                    <th>Fecha</th>
+                                    <th>Rol</th>
+                                    <th>Salario</th>
+                                    <th>Recibo de nómina</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -119,13 +119,13 @@
                                     <td>{{ $items->role_name }}</td>
                                     <td>${{ $items->salary }}</td>
                                     <td hidden class="salary">{{ $items->salary }}</td>
-                                    <td><a class="btn btn-sm btn-primary" href="{{ url('form/salary/view/'.$items->user_id) }}" target="_blank">Generate Slip</a></td>
+                                    <td><a class="btn btn-sm btn-primary" href="{{ url('form/salary/view/'.$items->user_id) }}" target="_blank">Generar</a></td>
                                     <td class="text-right">
                                         <div class="dropdown dropdown-action">
                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
                                             <div class="dropdown-menu dropdown-menu-right">
                                                 <a class="dropdown-item userSalary" href="#" data-toggle="modal" data-target="#edit_salary"><i class="fa fa-pencil m-r-5"></i> Edit</a>
-                                                <a class="dropdown-item salaryDelete" href="#" data-toggle="modal" data-target="#delete_salary"><i class="fa fa-trash-o m-r-5"></i> Delete</a>
+                                                <a class="dropdown-item salaryDelete" href="#" data-toggle="modal" data-target="#delete_salary"><i class="fa fa-trash-o m-r-5"></i> Eliminar</a>
                                             </div>
                                         </div>
                                     </td>
@@ -145,7 +145,7 @@
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add Staff Salary</h5>
+                        <h5 class="modal-title">Agregar salario del personal</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -156,9 +156,9 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Select Staff</label>
+                                        <label>Seleccionar personal</label>
                                         <select class="select select2s-hidden-accessible @error('name') is-invalid @enderror" style="width: 100%;" tabindex="-1" aria-hidden="true" id="name" name="name">
-                                            <option value="">-- Select --</option>
+                                            <option value="">-- Seleccionar --</option>
                                             @foreach ($userList as $key=>$user )
                                                 <option value="{{ $user->name }}" data-employee_id={{ $user->user_id }}>{{ $user->name }}</option>
                                             @endforeach
@@ -172,7 +172,7 @@
                                 </div>
                                 <input class="form-control" type="hidden" name="user_id" id="employee_id" readonly>
                                 <div class="col-sm-6">
-                                    <label>Net Salary</label>
+                                    <label>Salario neto</label>
                                     <input class="form-control @error('salary') is-invalid @enderror" type="number" name="salary" id="salary" value="{{ old('salary') }}" placeholder="Enter net salary">
                                     @error('salary')
                                         <span class="invalid-feedback" role="alert">
@@ -183,9 +183,9 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h4 class="text-primary">Earnings</h4>
+                                    <h4 class="text-primary">Ganancias</h4>
                                     <div class="form-group">
-                                        <label>Basic</label>
+                                        <label>Básico</label>
                                         <input class="form-control @error('basic') is-invalid @enderror" type="number" name="basic" id="basic" value="{{ old('basic') }}" placeholder="Enter basic">
                                         @error('basic')
                                             <span class="invalid-feedback" role="alert">
@@ -212,7 +212,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Conveyance</label>
+                                        <label>Transporte</label>
                                         <input class="form-control @error('conveyance') is-invalid @enderror" type="number"  name="conveyance" id="conveyance" value="{{ old('conveyance') }}" placeholder="Enter conveyance">
                                         @error('conveyance')
                                             <span class="invalid-feedback" role="alert">
@@ -221,7 +221,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Allowance</label>
+                                        <label>Prestación</label>
                                         <input class="form-control @error('allowance') is-invalid @enderror" type="number"  name="allowance" id="allowance" value="{{ old('allowance') }}" placeholder="Enter allowance">
                                         @error('allowance')
                                             <span class="invalid-feedback" role="alert">
@@ -230,7 +230,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Medical  Allowance</label>
+                                        <label>Asignación médica</label>
                                         <input class="form-control @error('medical_allowance') is-invalid @enderror" type="number" name="medical_allowance" id="medical_allowance" value="{{ old('medical_allowance') }}" placeholder="Enter medical  allowance">
                                         @error('medical_allowance')
                                             <span class="invalid-feedback" role="alert">
@@ -240,7 +240,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h4 class="text-primary">Deductions</h4>
+                                    <h4 class="text-primary">Deducciones</h4>
                                     <div class="form-group">
                                         <label>TDS</label>
                                         <input class="form-control @error('tds') is-invalid @enderror" type="number" name="tds" id="tds" value="{{ old('tds') }}" placeholder="Enter TDS">
@@ -269,7 +269,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Leave</label>
+                                        <label>Licencia</label>
                                         <input class="form-control @error('leave') is-invalid @enderror" type="text" name="leave" id="leave" value="{{ old('leave') }}" placeholder="Enter leave">
                                         @error('leave')
                                             <span class="invalid-feedback" role="alert">
@@ -278,7 +278,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Prof. Tax</label>
+                                        <label>XD</label>
                                         <input class="form-control @error('prof_tax') is-invalid @enderror" type="number" name="prof_tax" id="prof_tax" value="{{ old('prof_tax') }}" placeholder="Enter Prof. Tax">
                                         @error('prof_tax')
                                             <span class="invalid-feedback" role="alert">
@@ -287,7 +287,7 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
-                                        <label>Loan</label>
+                                        <label>Otros</label>
                                         <input class="form-control @error('labour_welfare') is-invalid @enderror" type="number" name="labour_welfare" id="labour_welfare" value="{{ old('labour_welfare') }}" placeholder="Enter Loan">
                                         @error('labour_welfare')
                                             <span class="invalid-feedback" role="alert">
@@ -298,7 +298,7 @@
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Agregar</button>
                             </div>
                         </form>
                     </div>
@@ -312,7 +312,7 @@
             <div class="modal-dialog modal-dialog-centered modal-md" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Staff Salary</h5>
+                        <h5 class="modal-title">Editar salario del personal</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -324,7 +324,7 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label>Name Staff</label>
+                                        <label>Nombre Personal</label>
                                         <input class="form-control " type="text" name="name" id="e_name" value="" readonly>
                                     </div>
                                     @error('name')
@@ -334,15 +334,15 @@
                                     @enderror
                                 </div>
                                 <div class="col-sm-6">
-                                    <label>Net Salary</label>
+                                    <label>Salario neto</label>
                                     <input class="form-control" type="text" name="salary" id="e_salary" value="">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <h4 class="text-primary">Earnings</h4>
+                                    <h4 class="text-primary">Ganancias</h4>
                                     <div class="form-group">
-                                        <label>Basic</label>
+                                        <label>Básico</label>
                                         <input class="form-control" type="text" name="basic" id="e_basic" value="">
                                     </div>
                                     <div class="form-group">
@@ -358,16 +358,16 @@
                                         <input class="form-control" type="text"  name="conveyance" id="e_conveyance" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label>Allowance</label>
+                                        <label>Prestación</label>
                                         <input class="form-control" type="text"  name="allowance" id="e_allowance" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label>Medical  Allowance</label>
+                                        <label>Asignación médica</label>
                                         <input class="form-control" type="text" name="medical_allowance" id="e_medical_allowance" value="">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <h4 class="text-primary">Deductions</h4>
+                                    <h4 class="text-primary">Deducciones</h4>
                                     <div class="form-group">
                                         <label>TDS</label>
                                         <input class="form-control" type="text" name="tds" id="e_tds" value="">
@@ -381,21 +381,21 @@
                                         <input class="form-control" type="text" name="pf" id="e_pf" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label>Leave</label>
+                                        <label>Licencia</label>
                                         <input class="form-control" type="text" name="leave" id="e_leave" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label>Prof. Tax</label>
+                                        <label>XD</label>
                                         <input class="form-control" type="text" name="prof_tax" id="e_prof_tax" value="">
                                     </div>
                                     <div class="form-group">
-                                        <label>Loan</label>
+                                        <label>Otros</label>
                                         <input class="form-control" type="text" name="labour_welfare" id="e_labour_welfare" value="">
                                     </div>
                                 </div>
                             </div>
                             <div class="submit-section">
-                                <button type="submit" class="btn btn-primary submit-btn">Update</button>
+                                <button type="submit" class="btn btn-primary submit-btn">Actualizar</button>
                             </div>
                         </form>
                     </div>
@@ -410,8 +410,8 @@
                 <div class="modal-content">
                     <div class="modal-body">
                         <div class="form-header">
-                            <h3>Delete Salary</h3>
-                            <p>Are you sure want to delete?</p>
+                            <h3>Eliminar salario</h3>
+                            <p>¿Estás seguro de que deseas eliminar?</p>
                         </div>
                         <div class="modal-btn delete-action">
                             <form action="{{ route('form/salary/delete') }}" method="POST">
@@ -419,10 +419,10 @@
                                 <div class="row">
                                     <div class="col-6">
                                         <input type="hidden" name="id" class="e_id" value="">
-                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Delete</button>
+                                        <button type="submit" class="btn btn-primary continue-btn submit-btn">Eliminar</button>
                                     </div>
                                     <div class="col-6">
-                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancel</a>
+                                        <a href="javascript:void(0);" data-dismiss="modal" class="btn btn-primary cancel-btn">Cancelar</a>
                                     </div>
                                 </div>
                             </form>

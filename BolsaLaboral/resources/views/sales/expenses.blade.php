@@ -18,7 +18,7 @@
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_expense"><i class="fa fa-plus"></i> Add Gastos</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_expense"><i class="fa fa-plus"></i> Agregar Gastos</a>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
                         <div class="form-group form-focus">
                             <input type="text" class="form-control floating" name="item_name">
-                            <label class="focus-label">Item Name</label>
+                            <label class="focus-label">Nombre del artículo</label>
                         </div>
                     </div>
 
@@ -40,7 +40,7 @@
                             <div class="cal-icon">
                                 <input class="form-control floating datetimepicker" type="text" name="from_date">
                             </div>
-                            <label class="focus-label">From</label>
+                            <label class="focus-label">De</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
@@ -48,11 +48,11 @@
                             <div class="cal-icon">
                                 <input class="form-control floating datetimepicker" type="text" name="to_date">
                             </div>
-                            <label class="focus-label">To</label>
+                            <label class="focus-label">A</label>
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3 col-lg-3 col-xl-2 col-12">
-                        <button type="submit" class="btn btn-success btn-block">Search</button>
+                        <button type="submit" class="btn btn-success btn-block">Buscar</button>
                     </div>
                 </div>
             </form>
@@ -66,14 +66,14 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Item</th>
-                                    <th class="purchase_from">Purchase From</th>
-                                    <th class="purchase_date">Purchase Date</th>
-                                    <th class="purchased_by">Purchased By</th>
-                                    <th class="amount">Amount</th>
-                                    <th class="paid_by">Paid By</th>
-                                    <th class="text-center">Status</th>
-                                    <th class="text-right">Actions</th>
+                                    <th>Artículo</th>
+                                    <th class="purchase_from">Compra desde</th>
+                                    <th class="purchase_date">Fecha de compra</th>
+                                    <th class="purchased_by">Comprado por</th>
+                                    <th class="amount">Cantidad</th>
+                                    <th class="paid_by">Pagado por</th>
+                                    <th class="text-center">Estado</th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>

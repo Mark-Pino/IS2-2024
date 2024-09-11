@@ -11,14 +11,14 @@
             <div class="page-header">
                 <div class="row align-items-center">
                     <div class="col">
-                        <h3 class="page-title">Trainers</h3>
+                        <h3 class="page-title">Entrenadores</h3>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Trainers</li>
+                            <li class="breadcrumb-item active">Entrenadores</li>
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
-                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_trainer"><i class="fa fa-plus"></i> Add New</a>
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_trainer"><i class="fa fa-plus"></i> Agregar nuevo</a>
                     </div>
                 </div>
             </div>
@@ -30,12 +30,12 @@
                             <thead>
                                 <tr>
                                     <th style="width: 30px;">#</th>
-                                    <th>Name </th>
-                                    <th>Contact Number </th>
-                                    <th>Email </th>
-                                    <th>Description </th>
-                                    <th>Status </th>
-                                    <th class="text-right">Action</th>
+                                    <th>Nombre </th>
+                                    <th>número de contacto </th>
+                                    <th>Correo </th>
+                                    <th>Descripción </th>
+                                    <th>Estado </th>
+                                    <th class="text-right">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -65,8 +65,8 @@
                                                 <i class="fa fa-dot-circle-o text-success"></i>{{ $trainer->status }}
                                             </a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Activo</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactivo</a>
                                             </div>
                                         </div>
                                     </td>
@@ -78,8 +78,8 @@
                                                 <i class="fa fa-dot-circle-o text-danger"></i>{{ $trainer->status }}
                                             </a>
                                             <div class="dropdown-menu">
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Active</a>
-                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactive</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-success"></i> Activo</a>
+                                                <a class="dropdown-item" href="#"><i class="fa fa-dot-circle-o text-danger"></i> Inactivo</a>
                                             </div>
                                         </div>
                                     </td>
@@ -108,7 +108,7 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Add New Trainer</h5>
+                        <h5 class="modal-title">Agregar nuevo entrenador</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
