@@ -1,11 +1,18 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
+<<<<<<< HEAD
 -- Servidor: 127.0.0.1
 -- Tiempo de generación: 11-09-2024 a las 06:55:49
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
+=======
+-- Servidor: localhost:3306
+-- Tiempo de generación: 10-09-2024 a las 17:59:28
+-- Versión del servidor: 8.0.30
+-- Versión de PHP: 8.1.10
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,11 +35,11 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `activity_logs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `date_time` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date_time` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -42,10 +49,32 @@ CREATE TABLE `activity_logs` (
 --
 
 INSERT INTO `activity_logs` (`id`, `name`, `email`, `description`, `date_time`, `created_at`, `updated_at`) VALUES
+<<<<<<< HEAD
 (1, 'Admin', 'admin@gmail.com', 'Has log out', 'Wed, Sep 11, 2024 10:16 AM', NULL, NULL),
 (2, 'Mark', 'admin@gmail.com', 'Has log in', 'Wed, Sep 11, 2024 10:20 AM', NULL, NULL),
 (3, 'Mark', 'admin@gmail.com', 'Has log out', 'Wed, Sep 11, 2024 10:48 AM', NULL, NULL),
 (4, 'Mark', 'admin@gmail.com', 'Has log in', 'Wed, Sep 11, 2024 10:48 AM', NULL, NULL);
+=======
+(1, 'Admin User', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 8:39 PM', NULL, NULL),
+(2, 'Admin User', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 8:40 PM', NULL, NULL),
+(3, 'Admin User', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 9:09 PM', NULL, NULL),
+(4, 'Admin User', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 9:10 PM', NULL, NULL),
+(5, 'Admin User', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 9:11 PM', NULL, NULL),
+(6, 'Admin User', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 9:11 PM', NULL, NULL),
+(7, 'Admin User', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 9:12 PM', NULL, NULL),
+(8, 'Admin User', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 9:12 PM', NULL, NULL),
+(9, 'Admin User', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 10:17 PM', NULL, NULL),
+(10, 'SGDAD', 'plyanira417@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 10:18 PM', NULL, NULL),
+(11, 'SGDAD', 'plyanira417@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 11:07 PM', NULL, NULL),
+(12, 'Mark', 'admin@gmail.com', 'Has log in', 'Tue, Sep 10, 2024 11:08 PM', NULL, NULL),
+(13, 'Mark', 'admin@gmail.com', 'Has log out', 'Tue, Sep 10, 2024 11:25 PM', NULL, NULL),
+(14, 'Mark', 'admin@gmail.com', 'Has log in', 'Wed, Sep 11, 2024 12:24 AM', NULL, NULL),
+(15, 'Mark', 'admin@gmail.com', 'Has log out', 'Wed, Sep 11, 2024 12:25 AM', NULL, NULL),
+(16, 'Mark', 'admin@gmail.com', 'Has log in', 'Wed, Sep 11, 2024 12:26 AM', NULL, NULL),
+(17, 'Mark', 'admin@gmail.com', 'Has log out', 'Wed, Sep 11, 2024 12:27 AM', NULL, NULL),
+(18, 'jean', 'jean@gmail.com', 'Has log in', 'Wed, Sep 11, 2024 12:27 AM', NULL, NULL),
+(19, 'jean', 'jean@gmail.com', 'Has log out', 'Wed, Sep 11, 2024 12:41 AM', NULL, NULL);
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 -- --------------------------------------------------------
 
@@ -54,25 +83,36 @@ INSERT INTO `activity_logs` (`id`, `name`, `email`, `description`, `date_time`, 
 --
 
 CREATE TABLE `add_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `job_title` varchar(255) DEFAULT NULL,
-  `department` varchar(255) DEFAULT NULL,
-  `job_location` varchar(255) DEFAULT NULL,
-  `no_of_vacancies` varchar(255) DEFAULT NULL,
-  `experience` varchar(255) DEFAULT NULL,
-  `age` varchar(255) DEFAULT NULL,
-  `salary_from` varchar(255) DEFAULT NULL,
-  `salary_to` varchar(255) DEFAULT NULL,
-  `job_type` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  `start_date` varchar(255) DEFAULT NULL,
-  `expired_date` varchar(255) DEFAULT NULL,
-  `description` longtext DEFAULT NULL,
-  `count` longtext DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `job_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `department` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `job_location` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `no_of_vacancies` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `experience` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `age` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `salary_from` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `salary_to` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `job_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `start_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `expired_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci,
+  `count` longtext COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+=======
+--
+-- Volcado de datos para la tabla `add_jobs`
+--
+
+INSERT INTO `add_jobs` (`id`, `job_title`, `department`, `job_location`, `no_of_vacancies`, `experience`, `age`, `salary_from`, `salary_to`, `job_type`, `status`, `start_date`, `expired_date`, `description`, `count`, `created_at`, `updated_at`) VALUES
+(1, 'safasf', 'IT Management', 'asfasf', 'asfasf', 'asfas', '214', '124124', '124124', 'Part Time', 'Open', '10-09-2024', '13-09-2024', '124124', '8', '2024-09-11 02:09:19', '2024-09-11 05:54:55'),
+(2, 'asfasf', 'IT Management', 'afasf', 'safasf', 'asfasf', '1243', '2141', '124124', 'Internship', 'Cancelled', '17-09-2024', '28-09-2024', 'safasf', '1', '2024-09-11 02:09:35', '2024-09-11 05:22:53');
+
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 -- --------------------------------------------------------
 
 --
@@ -80,8 +120,8 @@ CREATE TABLE `add_jobs` (
 --
 
 CREATE TABLE `answers` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `answer` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `answer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -104,13 +144,13 @@ INSERT INTO `answers` (`id`, `answer`, `created_at`, `updated_at`) VALUES
 --
 
 CREATE TABLE `apply_for_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `job_title` varchar(255) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `phone` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `message` varchar(255) DEFAULT NULL,
-  `cv_upload` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `job_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cv_upload` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -122,9 +162,9 @@ CREATE TABLE `apply_for_jobs` (
 --
 
 CREATE TABLE `categories` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `category` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `category` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -136,8 +176,8 @@ CREATE TABLE `categories` (
 --
 
 CREATE TABLE `departments` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `department` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `department` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -158,17 +198,27 @@ INSERT INTO `departments` (`id`, `department`, `created_at`, `updated_at`) VALUE
 --
 
 CREATE TABLE `employees` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `birth_date` varchar(255) DEFAULT NULL,
-  `gender` varchar(255) DEFAULT NULL,
-  `employee_id` varchar(255) DEFAULT NULL,
-  `company` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `birth_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gender` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employee_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `company` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+=======
+--
+-- Volcado de datos para la tabla `employees`
+--
+
+INSERT INTO `employees` (`id`, `name`, `email`, `birth_date`, `gender`, `employee_id`, `company`, `created_at`, `updated_at`) VALUES
+(3, 'Lucero', 'lucero.quispe.q@upeu.edu.pe', '10-09-2024', 'female', 'KH_00005', 'Fernando', '2024-09-11 03:15:40', '2024-09-11 03:15:40');
+
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 -- --------------------------------------------------------
 
 --
@@ -176,21 +226,21 @@ CREATE TABLE `employees` (
 --
 
 CREATE TABLE `estimates` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `estimate_number` varchar(255) NOT NULL,
-  `client` varchar(255) DEFAULT NULL,
-  `project` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `tax` varchar(255) DEFAULT NULL,
-  `client_address` varchar(255) DEFAULT NULL,
-  `billing_address` varchar(255) DEFAULT NULL,
-  `estimate_date` varchar(255) DEFAULT NULL,
-  `expiry_date` varchar(255) DEFAULT NULL,
-  `total` varchar(255) DEFAULT NULL,
-  `tax_1` varchar(255) DEFAULT NULL,
-  `discount` varchar(255) DEFAULT NULL,
-  `grand_total` varchar(255) DEFAULT NULL,
-  `other_information` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `estimate_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `client` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `project` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `client_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `billing_address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `estimate_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `expiry_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `total` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tax_1` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `discount` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `grand_total` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `other_information` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -213,13 +263,13 @@ DELIMITER ;
 --
 
 CREATE TABLE `estimates_adds` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `estimate_number` varchar(255) NOT NULL,
-  `item` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `unit_cost` varchar(255) DEFAULT NULL,
-  `qty` varchar(255) DEFAULT NULL,
-  `amount` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `estimate_number` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `item` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `unit_cost` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `qty` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `amount` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -231,15 +281,15 @@ CREATE TABLE `estimates_adds` (
 --
 
 CREATE TABLE `expenses` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `item_name` varchar(255) DEFAULT NULL,
-  `purchase_from` varchar(255) DEFAULT NULL,
-  `purchase_date` varchar(255) DEFAULT NULL,
-  `purchased_by` varchar(255) DEFAULT NULL,
-  `amount` varchar(255) DEFAULT NULL,
-  `paid_by` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  `attachments` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `item_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `purchase_from` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `purchase_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `purchased_by` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `amount` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `paid_by` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `attachments` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -251,13 +301,13 @@ CREATE TABLE `expenses` (
 --
 
 CREATE TABLE `failed_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `uuid` varchar(255) NOT NULL,
-  `connection` text NOT NULL,
-  `queue` text NOT NULL,
-  `payload` longtext NOT NULL,
-  `exception` longtext NOT NULL,
-  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+  `id` bigint UNSIGNED NOT NULL,
+  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -267,13 +317,14 @@ CREATE TABLE `failed_jobs` (
 --
 
 CREATE TABLE `holidays` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name_holiday` varchar(255) DEFAULT NULL,
-  `date_holiday` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `name_holiday` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date_holiday` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
 --
 -- Volcado de datos para la tabla `holidays`
 --
@@ -291,6 +342,8 @@ INSERT INTO `holidays` (`id`, `name_holiday`, `date_holiday`, `created_at`, `upd
 (10, 'Día no laborable para el sector público', '30-12-2024', '2024-09-11 15:27:50', '2024-09-11 15:27:50'),
 (11, 'Día no laborable para el sector público', '31-12-2024', '2024-09-11 15:28:02', '2024-09-11 15:28:02');
 
+=======
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 -- --------------------------------------------------------
 
 --
@@ -298,13 +351,13 @@ INSERT INTO `holidays` (`id`, `name_holiday`, `date_holiday`, `created_at`, `upd
 --
 
 CREATE TABLE `leaves_admins` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` varchar(255) DEFAULT NULL,
-  `leave_type` varchar(255) DEFAULT NULL,
-  `from_date` varchar(255) DEFAULT NULL,
-  `to_date` varchar(255) DEFAULT NULL,
-  `day` varchar(255) DEFAULT NULL,
-  `leave_reason` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `leave_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `from_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `to_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `day` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `leave_reason` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -316,9 +369,9 @@ CREATE TABLE `leaves_admins` (
 --
 
 CREATE TABLE `migrations` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `migration` varchar(255) NOT NULL,
-  `batch` int(11) NOT NULL
+  `id` int UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `batch` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -372,20 +425,37 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `module_permissions` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `employee_id` varchar(255) DEFAULT NULL,
-  `module_permission` varchar(255) DEFAULT NULL,
-  `id_count` varchar(255) DEFAULT NULL,
-  `read` varchar(255) DEFAULT NULL,
-  `write` varchar(255) DEFAULT NULL,
-  `create` varchar(255) DEFAULT NULL,
-  `delete` varchar(255) DEFAULT NULL,
-  `import` varchar(255) DEFAULT NULL,
-  `export` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `employee_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `module_permission` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `id_count` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `read` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `write` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `create` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `delete` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `import` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `export` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+=======
+--
+-- Volcado de datos para la tabla `module_permissions`
+--
+
+INSERT INTO `module_permissions` (`id`, `employee_id`, `module_permission`, `id_count`, `read`, `write`, `create`, `delete`, `import`, `export`, `created_at`, `updated_at`) VALUES
+(17, 'KH_00005', 'Holidays', '1', 'Y', 'Y', 'Y', 'Y', 'Y', 'N', NULL, NULL),
+(18, 'KH_00005', 'Leaves', '2', 'Y', 'Y', 'Y', 'N', 'N', 'N', NULL, NULL),
+(19, 'KH_00005', 'Clients', '3', 'Y', 'Y', 'Y', 'N', 'N', 'N', NULL, NULL),
+(20, 'KH_00005', 'Projects', '4', 'Y', 'N', 'Y', 'N', 'N', 'N', NULL, NULL),
+(21, 'KH_00005', 'Tasks', '5', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
+(22, 'KH_00005', 'Chats', '6', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
+(23, 'KH_00005', 'Assets', '7', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL),
+(24, 'KH_00005', 'Timing Sheets', '8', 'Y', 'Y', 'Y', 'Y', 'N', 'N', NULL, NULL);
+
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 -- --------------------------------------------------------
 
 --
@@ -393,8 +463,8 @@ CREATE TABLE `module_permissions` (
 --
 
 CREATE TABLE `password_resets` (
-  `email` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -405,25 +475,25 @@ CREATE TABLE `password_resets` (
 --
 
 CREATE TABLE `performance_appraisals` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `date` varchar(255) DEFAULT NULL,
-  `user_id` varchar(255) DEFAULT NULL,
-  `customer_experience` varchar(255) DEFAULT NULL,
-  `marketing` varchar(255) DEFAULT NULL,
-  `management` varchar(255) DEFAULT NULL,
-  `administration` varchar(255) DEFAULT NULL,
-  `presentation_skill` varchar(255) DEFAULT NULL,
-  `quality_of_Work` varchar(255) DEFAULT NULL,
-  `efficiency` varchar(255) DEFAULT NULL,
-  `integrity` varchar(255) DEFAULT NULL,
-  `professionalism` varchar(255) DEFAULT NULL,
-  `team_work` varchar(255) DEFAULT NULL,
-  `critical_thinking` varchar(255) DEFAULT NULL,
-  `conflict_management` varchar(255) DEFAULT NULL,
-  `attendance` varchar(255) DEFAULT NULL,
-  `ability_to_meet_deadline` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_experience` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `marketing` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `management` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `administration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `presentation_skill` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `quality_of_Work` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `efficiency` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `integrity` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `professionalism` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `team_work` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `critical_thinking` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `conflict_management` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `attendance` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ability_to_meet_deadline` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -435,28 +505,39 @@ CREATE TABLE `performance_appraisals` (
 --
 
 CREATE TABLE `performance_indicators` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` varchar(255) DEFAULT NULL,
-  `designation` varchar(255) DEFAULT NULL,
-  `customer_eperience` varchar(255) DEFAULT NULL,
-  `marketing` varchar(255) DEFAULT NULL,
-  `management` varchar(255) DEFAULT NULL,
-  `administration` varchar(255) DEFAULT NULL,
-  `presentation_skill` varchar(255) DEFAULT NULL,
-  `quality_of_Work` varchar(255) DEFAULT NULL,
-  `efficiency` varchar(255) DEFAULT NULL,
-  `integrity` varchar(255) DEFAULT NULL,
-  `professionalism` varchar(255) DEFAULT NULL,
-  `team_work` varchar(255) DEFAULT NULL,
-  `critical_thinking` varchar(255) DEFAULT NULL,
-  `conflict_management` varchar(255) DEFAULT NULL,
-  `attendance` varchar(255) DEFAULT NULL,
-  `ability_to_meet_deadline` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `customer_eperience` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `marketing` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `management` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `administration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `presentation_skill` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `quality_of_Work` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `efficiency` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `integrity` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `professionalism` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `team_work` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `critical_thinking` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `conflict_management` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `attendance` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ability_to_meet_deadline` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+=======
+--
+-- Volcado de datos para la tabla `performance_indicators`
+--
+
+INSERT INTO `performance_indicators` (`id`, `user_id`, `designation`, `customer_eperience`, `marketing`, `management`, `administration`, `presentation_skill`, `quality_of_Work`, `efficiency`, `integrity`, `professionalism`, `team_work`, `critical_thinking`, `conflict_management`, `attendance`, `ability_to_meet_deadline`, `status`, `created_at`, `updated_at`) VALUES
+(1, 'KH_00001', 'Marketing', 'Beginner', 'Beginner', 'Advanced', 'Intermediate', 'Beginner', 'Intermediate', 'Beginner', 'Beginner', 'Intermediate', 'Intermediate', 'Intermediate', 'Intermediate', 'Intermediate', 'Intermediate', 'Inactive', '2024-09-11 02:04:00', '2024-09-11 02:04:00'),
+(2, 'KH_00001', 'IT Management', 'Intermediate', 'Intermediate', 'Intermediate', 'Beginner', 'Intermediate', 'Advanced', 'Intermediate', 'Advanced', 'Advanced', 'Intermediate', 'Beginner', 'Intermediate', 'Intermediate', 'Intermediate', 'Active', '2024-09-11 02:04:19', '2024-09-11 02:04:19');
+
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 -- --------------------------------------------------------
 
 --
@@ -464,8 +545,8 @@ CREATE TABLE `performance_indicators` (
 --
 
 CREATE TABLE `performance_indicator_lists` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `per_name_list` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `per_name_list` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -488,14 +569,14 @@ INSERT INTO `performance_indicator_lists` (`id`, `per_name_list`, `created_at`, 
 --
 
 CREATE TABLE `permission_lists` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `permission_name` varchar(255) DEFAULT NULL,
-  `read` varchar(255) DEFAULT NULL,
-  `write` varchar(255) DEFAULT NULL,
-  `create` varchar(255) DEFAULT NULL,
-  `delete` varchar(255) DEFAULT NULL,
-  `import` varchar(255) DEFAULT NULL,
-  `export` varchar(255) DEFAULT NULL
+  `id` bigint UNSIGNED NOT NULL,
+  `permission_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `read` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `write` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `create` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `delete` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `import` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `export` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -519,12 +600,12 @@ INSERT INTO `permission_lists` (`id`, `permission_name`, `read`, `write`, `creat
 --
 
 CREATE TABLE `personal_access_tokens` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `tokenable_type` varchar(255) NOT NULL,
-  `tokenable_id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `token` varchar(64) NOT NULL,
-  `abilities` text DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `tokenable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `tokenable_id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `abilities` text COLLATE utf8mb4_unicode_ci,
   `last_used_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -537,16 +618,16 @@ CREATE TABLE `personal_access_tokens` (
 --
 
 CREATE TABLE `personal_information` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `user_id` varchar(255) NOT NULL,
-  `passport_no` varchar(255) NOT NULL,
-  `passport_expiry_date` varchar(255) DEFAULT NULL,
-  `tel` varchar(255) DEFAULT NULL,
-  `nationality` varchar(255) DEFAULT NULL,
-  `religion` varchar(255) DEFAULT NULL,
-  `marital_status` varchar(255) DEFAULT NULL,
-  `employment_of_spouse` varchar(255) DEFAULT NULL,
-  `children` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `passport_no` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `passport_expiry_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tel` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nationality` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `religion` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `marital_status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employment_of_spouse` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `children` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -558,8 +639,8 @@ CREATE TABLE `personal_information` (
 --
 
 CREATE TABLE `position_types` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `position` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -585,24 +666,34 @@ INSERT INTO `position_types` (`id`, `position`, `created_at`, `updated_at`) VALU
 --
 
 CREATE TABLE `profile_information` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `user_id` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `birth_date` varchar(255) DEFAULT NULL,
-  `gender` varchar(255) DEFAULT NULL,
-  `address` varchar(255) DEFAULT NULL,
-  `state` varchar(255) DEFAULT NULL,
-  `country` varchar(255) DEFAULT NULL,
-  `pin_code` varchar(255) DEFAULT NULL,
-  `phone_number` varchar(255) DEFAULT NULL,
-  `department` varchar(255) DEFAULT NULL,
-  `designation` varchar(255) DEFAULT NULL,
-  `reports_to` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `birth_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gender` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `state` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `country` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pin_code` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `department` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `reports_to` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+<<<<<<< HEAD
+=======
+--
+-- Volcado de datos para la tabla `profile_information`
+--
+
+INSERT INTO `profile_information` (`id`, `name`, `user_id`, `email`, `birth_date`, `gender`, `address`, `state`, `country`, `pin_code`, `phone_number`, `department`, `designation`, `reports_to`, `created_at`, `updated_at`) VALUES
+(1, 'Admin User', 'KH_00001', 'admin@gmail.com', '10-09-2024', 'Male', 'sfasfa@asfsa', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-09-11 02:23:09', '2024-09-11 02:26:03');
+
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 -- --------------------------------------------------------
 
 --
@@ -610,19 +701,19 @@ CREATE TABLE `profile_information` (
 --
 
 CREATE TABLE `questions` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `category` varchar(255) DEFAULT NULL,
-  `department` varchar(255) DEFAULT NULL,
-  `questions` varchar(255) DEFAULT NULL,
-  `option_a` varchar(255) DEFAULT NULL,
-  `option_b` varchar(255) DEFAULT NULL,
-  `option_c` varchar(255) DEFAULT NULL,
-  `option_d` varchar(255) DEFAULT NULL,
-  `answer` varchar(255) DEFAULT NULL,
-  `code_snippets` varchar(255) DEFAULT NULL,
-  `answer_explanation` varchar(255) DEFAULT NULL,
-  `video_link` varchar(255) DEFAULT NULL,
-  `image_to_question` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `category` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `department` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `questions` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `option_a` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `option_b` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `option_c` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `option_d` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `code_snippets` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer_explanation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `video_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image_to_question` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -634,8 +725,8 @@ CREATE TABLE `questions` (
 --
 
 CREATE TABLE `roles_permissions` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `permissions_name` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `permissions_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -663,8 +754,8 @@ INSERT INTO `roles_permissions` (`id`, `permissions_name`, `created_at`, `update
 --
 
 CREATE TABLE `role_type_users` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `role_type` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `role_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -687,7 +778,7 @@ INSERT INTO `role_type_users` (`id`, `role_type`, `created_at`, `updated_at`) VA
 --
 
 CREATE TABLE `sequence_estimates` (
-  `id` bigint(20) UNSIGNED NOT NULL
+  `id` bigint UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -697,7 +788,7 @@ CREATE TABLE `sequence_estimates` (
 --
 
 CREATE TABLE `sequence_tbls` (
-  `id` bigint(20) UNSIGNED NOT NULL
+  `id` bigint UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -707,9 +798,17 @@ CREATE TABLE `sequence_tbls` (
 INSERT INTO `sequence_tbls` (`id`) VALUES
 (1),
 (2),
+<<<<<<< HEAD
 (4),
 (6),
 (10);
+=======
+(3),
+(4),
+(5),
+(6),
+(7);
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 -- --------------------------------------------------------
 
@@ -718,22 +817,22 @@ INSERT INTO `sequence_tbls` (`id`) VALUES
 --
 
 CREATE TABLE `staff_salaries` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `user_id` varchar(255) DEFAULT NULL,
-  `salary` varchar(255) DEFAULT NULL,
-  `basic` varchar(255) DEFAULT NULL,
-  `da` varchar(255) DEFAULT NULL,
-  `hra` varchar(255) DEFAULT NULL,
-  `conveyance` varchar(255) DEFAULT NULL,
-  `allowance` varchar(255) DEFAULT NULL,
-  `medical_allowance` varchar(255) DEFAULT NULL,
-  `tds` varchar(255) DEFAULT NULL,
-  `esi` varchar(255) DEFAULT NULL,
-  `pf` varchar(255) DEFAULT NULL,
-  `leave` varchar(255) DEFAULT NULL,
-  `prof_tax` varchar(255) DEFAULT NULL,
-  `labour_welfare` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `salary` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `basic` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `da` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `hra` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `conveyance` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `allowance` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `medical_allowance` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tds` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `esi` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pf` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `leave` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `prof_tax` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `labour_welfare` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -745,14 +844,14 @@ CREATE TABLE `staff_salaries` (
 --
 
 CREATE TABLE `trainers` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `full_name` varchar(255) DEFAULT NULL,
-  `trainer_id` varchar(255) DEFAULT NULL,
-  `role` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `phone` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `full_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `trainer_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -764,17 +863,17 @@ CREATE TABLE `trainers` (
 --
 
 CREATE TABLE `trainings` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `trainer_id` varchar(255) DEFAULT NULL,
-  `employees_id` varchar(255) DEFAULT NULL,
-  `training_type` varchar(255) DEFAULT NULL,
-  `trainer` varchar(255) DEFAULT NULL,
-  `employees` varchar(255) DEFAULT NULL,
-  `training_cost` varchar(255) DEFAULT NULL,
-  `start_date` varchar(255) DEFAULT NULL,
-  `end_date` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `trainer_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employees_id` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `training_type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `trainer` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `employees` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `training_cost` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `start_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `end_date` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -786,10 +885,10 @@ CREATE TABLE `trainings` (
 --
 
 CREATE TABLE `training_types` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `type` varchar(255) DEFAULT NULL,
-  `description` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `type` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -801,8 +900,8 @@ CREATE TABLE `training_types` (
 --
 
 CREATE TABLE `type_jobs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name_type_job` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `name_type_job` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -826,20 +925,20 @@ INSERT INTO `type_jobs` (`id`, `name_type_job`, `created_at`, `updated_at`) VALU
 --
 
 CREATE TABLE `users` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `user_id` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `join_date` varchar(255) NOT NULL,
-  `phone_number` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  `role_name` varchar(255) DEFAULT NULL,
-  `avatar` varchar(255) DEFAULT NULL,
-  `position` varchar(255) DEFAULT NULL,
-  `department` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `join_date` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `avatar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `position` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `department` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) NOT NULL,
-  `remember_token` varchar(100) DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -849,11 +948,21 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `user_id`, `email`, `join_date`, `phone_number`, `status`, `role_name`, `avatar`, `position`, `department`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+<<<<<<< HEAD
 (1, 'Mark', 'KH_00001', 'admin@gmail.com', 'Wed, Sep 11, 2024 10:14 AM', '+51 974 981 999', 'Active', 'Admin', '579162795.png', NULL, NULL, NULL, '$2y$10$pDFQXkz184R2xO9f2KjD5OW8Ywf5OFxj4SFx/U1VX3U/Fs8U7QxjK', NULL, '2024-09-11 15:14:25', '2024-09-11 15:45:01'),
 (2, 'Anyelo', 'KH_00002', 'anyelo@gmail.com', 'Wed, Sep 11, 2024 10:17 AM', '+51 954 142 637', 'Active', 'Super Admin', '169534294.png', NULL, NULL, NULL, '$2y$10$tElhqBj.sPRTzLIRrAySB.aO7RnKwHJu8iWtfjuxcya51DsWSIVia', NULL, '2024-09-11 15:17:23', '2024-09-11 15:43:56'),
 (4, 'Jean', 'KH_00004', 'jean@gmail.com', 'Wed, Sep 11, 2024 10:18 AM', '+51 995 491 811', 'Active', 'Employee', '1654259294.png', 'Web Developer', 'Web Department', NULL, '$2y$10$ObR0GdkP0qctdBj.GQ7yrOmbQk00BQOVa46H1V4Xmlzd8tUgQ9./.', NULL, '2024-09-11 15:18:14', '2024-09-11 15:43:37'),
 (6, 'Harold', 'KH_00006', 'harold@gmail.com', 'Wed, Sep 11, 2024 10:19 AM', '+51 976 189 212', 'Inactive', 'Client', '1943406323.png', 'Android Developer', 'IT Management', NULL, '$2y$10$bOYfIKmBq7pewyzuHAS/d.mABYEMmEYUAHBgzU3f9BIPRyNvNI8oG', NULL, '2024-09-11 15:19:06', '2024-09-11 15:47:03'),
 (10, 'Camote', 'KH_00010', 'camote@gmail.com', 'Wed, Sep 11, 2024 10:20 AM', '+51 903 428 653', 'Disable', 'Normal User', '1762299181.png', NULL, NULL, NULL, '$2y$10$oWJvoMc.WUOgmg7Q4we64uLGUucxR2k/leJTjKyvU49pcMEp/7kRW', NULL, '2024-09-11 15:20:04', '2024-09-11 15:46:57');
+=======
+(1, 'Mark', 'KH_00001', 'admin@gmail.com', 'Tue, Sep 10, 2024 8:34 PM', '974981999', 'Active', 'Admin', '1585615517.png', NULL, 'Web Department', NULL, '$2y$10$tZkmh3sC4eFrU7WLOVBey.5/SfVxJhuJ5t7x7fHlJwjn0dKRLWXMS', NULL, '2024-09-11 01:34:22', '2024-09-11 02:50:46'),
+(2, 'Fernando', 'KH_00002', 'fernandocariquispe@gmail.com', 'Tue, Sep 10, 2024 8:39 PM', '123123123', 'Disable', 'Client', '1403286397.png', 'CEO', 'Web Department', NULL, '$2y$10$VxhDvVfRIMSHv3G/GNk./.f2X9IaWlUUCrIvTKN8mmy.mp32Xxst6', NULL, '2024-09-11 01:39:31', '2024-09-11 03:09:52'),
+(3, 'Lizbeth', 'KH_00003', 'lizbeth.ticona@upeu.edu.pe', 'Tue, Sep 10, 2024 8:40 PM', '976542465', 'Active', 'Normal User', '1488593401.png', 'CFO', 'Web Department', NULL, '$2y$10$zICYh7ek/6zlvhxKOv8OdurPtP4mQLXFrhttBh8o32U03UVTpHPDG', NULL, '2024-09-11 01:40:34', '2024-09-11 03:02:18'),
+(4, 'Anyelito', 'KH_00004', 'anyelo.sarmiento@upeu.edu.pe', 'Tue, Sep 10, 2024 9:29 PM', '974646521', 'Active', 'Super Admin', '1725978572.jpg', 'Manager', 'IT Management', NULL, '$2y$10$nz8ysFc7m.JrZA6GryVR8.j6W6paOfp5apYgSHXr72/rzeaGlru0O', NULL, '2024-09-11 02:29:32', '2024-09-11 02:51:39'),
+(5, 'Lucero', 'KH_00005', 'lucero.quispe.q@upeu.edu.pe', 'Tue, Sep 10, 2024 9:31 PM', '978564652', 'Active', 'Employee', '895881577.png', 'Android Developer', 'Marketing', NULL, '$2y$10$pelX8SJUx5ShZdhfclGBueJVrIuX7ye4cGTQ2jrSone9sABLmHKc6', NULL, '2024-09-11 02:31:09', '2024-09-11 02:53:13'),
+(6, 'SGDAD', 'KH_00006', 'plyanira417@gmail.com', 'Tue, Sep 10, 2024 10:18 PM', NULL, 'Active', 'Employee', 'photo_defaults.jpg', NULL, NULL, NULL, '$2y$10$hAnv3K8zb/8/J3I2D3KxWehtt9oMXhlYvdlrEV9GIRwONkGPgdAeG', NULL, '2024-09-11 03:18:11', '2024-09-11 03:18:11'),
+(7, 'jean', 'KH_00007', 'jean@gmail.com', 'Wed, Sep 11, 2024 12:26 AM', '12541251251', 'Active', 'Employee', '1556144094.png', 'Web Designer', 'Marketing', NULL, '$2y$10$tEpxVM3J.ujee6GKPb/7UO1JjAQfdZVKbqYqLE1Dg9je2MVU1o9Qy', NULL, '2024-09-11 05:26:10', '2024-09-11 05:27:33');
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- Disparadores `users`
@@ -873,14 +982,14 @@ DELIMITER ;
 --
 
 CREATE TABLE `user_activity_logs` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `user_name` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `phone_number` varchar(255) DEFAULT NULL,
-  `status` varchar(255) DEFAULT NULL,
-  `role_name` varchar(255) DEFAULT NULL,
-  `modify_user` varchar(255) DEFAULT NULL,
-  `date_time` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone_number` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `role_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `modify_user` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date_time` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -890,6 +999,7 @@ CREATE TABLE `user_activity_logs` (
 --
 
 INSERT INTO `user_activity_logs` (`id`, `user_name`, `email`, `phone_number`, `status`, `role_name`, `modify_user`, `date_time`, `created_at`, `updated_at`) VALUES
+<<<<<<< HEAD
 (1, 'Mark', 'admin@gmail.com', NULL, 'Active', 'Admin', 'Update', 'Wed, Sep 11, 2024 10:16 AM', NULL, NULL),
 (2, 'Camote', 'camote@gmail.com', NULL, 'Active', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:21 AM', NULL, NULL),
 (3, 'Camote', 'camote@gmail.com', NULL, 'Active', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:21 AM', NULL, NULL),
@@ -909,6 +1019,23 @@ INSERT INTO `user_activity_logs` (`id`, `user_name`, `email`, `phone_number`, `s
 (17, 'Camote', 'camote@gmail.com', '+51 903 428 653', 'Inactive', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:46 AM', NULL, NULL),
 (18, 'Camote', 'camote@gmail.com', '+51 903 428 653', 'Disable', 'Normal User', 'Update', 'Wed, Sep 11, 2024 10:46 AM', NULL, NULL),
 (19, 'Harold', 'harold@gmail.com', '+51 976 189 212', 'Inactive', 'Client', 'Update', 'Wed, Sep 11, 2024 10:47 AM', NULL, NULL);
+=======
+(1, 'sad', 'asd@asd', '123123123', 'Active', 'Client', 'Update', 'Tue, Sep 10, 2024 8:41 PM', NULL, NULL),
+(2, 'Mark', 'admin@gmail.com', NULL, 'Active', 'Admin', 'Update', 'Tue, Sep 10, 2024 9:26 PM', NULL, NULL),
+(3, 'asfdghjl', 'asdfhjgh@adjhs', NULL, 'Active', 'Normal User', 'Update', 'Tue, Sep 10, 2024 9:28 PM', NULL, NULL),
+(4, 'Mark', 'admin@gmail.com', NULL, 'Active', 'Admin', 'Update', 'Tue, Sep 10, 2024 9:29 PM', NULL, NULL),
+(5, 'sad', 'asd@asd', '123123123', 'Disable', 'Client', 'Update', 'Tue, Sep 10, 2024 9:31 PM', NULL, NULL),
+(6, 'sad', 'asd@asd', '123123123', 'Disable', 'Client', 'Update', 'Tue, Sep 10, 2024 9:31 PM', NULL, NULL),
+(7, 'Mark', 'admin@gmail.com', '974981999', 'Active', 'Admin', 'Update', 'Tue, Sep 10, 2024 9:50 PM', NULL, NULL),
+(8, 'Anyelito', 'anyelo.sarmiento@upeu.edu.pe', '974646521', 'Active', 'Super Admin', 'Update', 'Tue, Sep 10, 2024 9:51 PM', NULL, NULL),
+(9, 'Lucero', 'lucero.quispe.q@upeu.edu.pe', '978564652', 'Active', 'Employee', 'Update', 'Tue, Sep 10, 2024 9:52 PM', NULL, NULL),
+(10, 'Lucero', 'lucero.quispe.q@upeu.edu.pe', '978564652', 'Active', 'Employee', 'Update', 'Tue, Sep 10, 2024 9:52 PM', NULL, NULL),
+(11, 'Lucero', 'lucero.quispe.q@upeu.edu.pe', '978564652', 'Active', 'Employee', 'Update', 'Tue, Sep 10, 2024 9:53 PM', NULL, NULL),
+(12, 'Lizbeth', 'lizbeth.ticona@upeu.edu.pe', '976542465', 'Active', 'Normal User', 'Update', 'Tue, Sep 10, 2024 10:02 PM', NULL, NULL),
+(13, 'Fernando', 'fernandocariquispe@gmail.com', '123123123', 'Disable', 'Client', 'Update', 'Tue, Sep 10, 2024 10:05 PM', NULL, NULL),
+(14, 'Fernando', 'fernandocariquispe@gmail.com', '123123123', 'Disable', 'Client', 'Update', 'Tue, Sep 10, 2024 10:09 PM', NULL, NULL),
+(15, 'jean', 'jean@gmail.com', '12541251251', 'Active', 'Employee', 'Update', 'Wed, Sep 11, 2024 12:27 AM', NULL, NULL);
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 -- --------------------------------------------------------
 
@@ -917,8 +1044,8 @@ INSERT INTO `user_activity_logs` (`id`, `user_name`, `email`, `phone_number`, `s
 --
 
 CREATE TABLE `user_types` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `type_name` varchar(255) DEFAULT NULL,
+  `id` bigint UNSIGNED NOT NULL,
+  `type_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1171,217 +1298,309 @@ ALTER TABLE `user_types`
 -- AUTO_INCREMENT de la tabla `activity_logs`
 --
 ALTER TABLE `activity_logs`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `add_jobs`
 --
 ALTER TABLE `add_jobs`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `answers`
 --
 ALTER TABLE `answers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `apply_for_jobs`
 --
 ALTER TABLE `apply_for_jobs`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `categories`
 --
 ALTER TABLE `categories`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `departments`
 --
 ALTER TABLE `departments`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `employees`
 --
 ALTER TABLE `employees`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `estimates`
 --
 ALTER TABLE `estimates`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `estimates_adds`
 --
 ALTER TABLE `estimates_adds`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `expenses`
 --
 ALTER TABLE `expenses`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `holidays`
 --
 ALTER TABLE `holidays`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `leaves_admins`
 --
 ALTER TABLE `leaves_admins`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `module_permissions`
 --
 ALTER TABLE `module_permissions`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `performance_appraisals`
 --
 ALTER TABLE `performance_appraisals`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `performance_indicators`
 --
 ALTER TABLE `performance_indicators`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `performance_indicator_lists`
 --
 ALTER TABLE `performance_indicator_lists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `permission_lists`
 --
 ALTER TABLE `permission_lists`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `personal_information`
 --
 ALTER TABLE `personal_information`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `position_types`
 --
 ALTER TABLE `position_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `profile_information`
 --
 ALTER TABLE `profile_information`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `questions`
 --
 ALTER TABLE `questions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `roles_permissions`
 --
 ALTER TABLE `roles_permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `role_type_users`
 --
 ALTER TABLE `role_type_users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `sequence_estimates`
 --
 ALTER TABLE `sequence_estimates`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `sequence_tbls`
 --
 ALTER TABLE `sequence_tbls`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `staff_salaries`
 --
 ALTER TABLE `staff_salaries`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `trainers`
 --
 ALTER TABLE `trainers`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `trainings`
 --
 ALTER TABLE `trainings`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `training_types`
 --
 ALTER TABLE `training_types`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `type_jobs`
 --
 ALTER TABLE `type_jobs`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `user_activity_logs`
 --
 ALTER TABLE `user_activity_logs`
+<<<<<<< HEAD
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+=======
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
 
 --
 -- AUTO_INCREMENT de la tabla `user_types`
 --
 ALTER TABLE `user_types`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

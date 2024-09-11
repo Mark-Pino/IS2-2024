@@ -15,7 +15,11 @@
                         </ul>
                     </div>
                     <div class="col-auto float-right ml-auto">
+<<<<<<< HEAD
                         <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_user"><i class="fa fa-plus"></i> Agregar Usuario</a>
+=======
+                        <a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_user"><i class="fa fa-plus"></i> Add Userio</a>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                     </div>
                 </div>
             </div>
@@ -44,7 +48,11 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-md-3">
+<<<<<<< HEAD
                         <button type="sumit" class="btn btn-success btn-block"> Buscar </button>
+=======
+                        <button type="sumit" class="btn btn-success btn-block"> Search </button>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                     </div>
                 </div>
             </form>
@@ -178,13 +186,21 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Correo</label>
+=======
+                                    <label>Emaill Address</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <input class="form-control" type="email" id="" name="email" placeholder="Enter Email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Rol</label>
+=======
+                                    <label>Role Name</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <select class="select" name="role_name" id="role_name">
                                         <option selected disabled> --Select --</option>
                                         @foreach ($role_name as $role )
@@ -193,7 +209,11 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Puesto</label>
+=======
+                                    <label>Position</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <select class="select" name="position" id="position">
                                         <option selected disabled> --Select --</option>
                                         @foreach ($position as $positions )
@@ -211,7 +231,11 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Departamento</label>
+=======
+                                    <label>Department</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <select class="select" name="department" id="department">
                                         <option selected disabled> --Select --</option>
                                         @foreach ($department as $departments )
@@ -222,7 +246,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Estado</label>
+=======
+                                    <label>Status</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <select class="select" name="status" id="status">
                                         <option selected disabled> --Select --</option>
                                         @foreach ($status_user as $status )
@@ -231,7 +259,11 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Foto de perfil</label>
+=======
+                                    <label>Photo</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <input class="form-control" type="file" id="image" name="image">
                                 </div>
                             </div>
@@ -244,7 +276,11 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Repita la Contraseña</label>
+=======
+                                    <label>Repeat Password</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <input type="password" class="form-control" name="password_confirmation" placeholder="Choose Repeat Password">
                                 </div>
                             </div>
@@ -281,13 +317,21 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Correo</label>
+=======
+                                    <label>Email</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <input class="form-control" type="text" name="email" id="e_email" value=""/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Rol</label>
+=======
+                                    <label>Role Name</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <select class="select" name="role_name" id="e_role_name">
                                         @foreach ($role_name as $role )
                                         <option value="{{ $role->role_type }}">{{ $role->role_type }}</option>
@@ -295,7 +339,11 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Puesto</label>
+=======
+                                    <label>Position</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <select class="select" name="position" id="e_position">
                                         @foreach ($position as $positions )
                                         <option value="{{ $positions->position }}">{{ $positions->position }}</option>
@@ -312,7 +360,11 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Departamento</label>
+=======
+                                    <label>Department</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <select class="select" name="department" id="e_department">
                                         @foreach ($department as $departments )
                                         <option value="{{ $departments->department }}">{{ $departments->department }}</option>
@@ -322,7 +374,11 @@
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Estado</label>
+=======
+                                    <label>Status</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <select class="select" name="status" id="e_status">
                                         @foreach ($status_user as $status )
                                         <option value="{{ $status->type_name }}">{{ $status->type_name }}</option>
@@ -330,7 +386,11 @@
                                     </select>
                                 </div>
                                 <div class="col-sm-6">
+<<<<<<< HEAD
                                     <label>Foto</label>
+=======
+                                    <label>Photo</label>
+>>>>>>> 5a6e97dd2db7bbde4e5426965570ddf4a4600e1c
                                     <input class="form-control" type="file" id="image" name="images">
                                     <input type="hidden" name="hidden_image" id="e_image" value="">
                                 </div>
